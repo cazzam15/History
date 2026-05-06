@@ -1,0 +1,1721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Free Nat 5 History Revision — Scotland</title>
+<meta name="description" content="Free Nat 5 History revision for Scotland. Great War, Enslaved Africans, Civil Rights &amp; exam skills.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #0d1117;
+  --surface: #161b22;
+  --card: #1c2330;
+  --border: #30363d;
+  --accent: #3fb950;
+  --accent-glow: rgba(63,185,80,0.15);
+  --accent2: #f85149;
+  --accent3: #d29922;
+  --accent4: #58a6ff;
+  --accent5: #bc8cff;
+  --text: #e6edf3;
+  --muted: #8b949e;
+  --radius: 12px;
+  --nav-h: 56px;
+  font-size: 15px;
+}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;overflow-x:hidden}
+button{font-family:'Nunito',sans-serif;cursor:pointer}
+
+/* ── TOP BAR ── */
+.topbar{
+  position:sticky;top:0;z-index:100;
+  background:rgba(13,17,23,0.92);backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  display:flex;align-items:center;gap:10px;
+  padding:0 16px;height:54px;
+}
+.topbar-logo{
+  font-size:1.1rem;font-weight:900;color:var(--text);
+  display:flex;align-items:center;gap:6px;flex:1;
+}
+.topbar-logo span{color:var(--accent)}
+.xp-pill{
+  display:flex;align-items:center;gap:6px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:100px;padding:5px 10px;font-size:0.75rem;
+  font-weight:700;font-family:'DM Mono',monospace;
+}
+.xp-pill .xp-val{color:var(--accent3)}
+.streak-pill{
+  display:flex;align-items:center;gap:4px;
+  background:var(--card);border:1px solid var(--border);
+  border-radius:100px;padding:5px 10px;font-size:0.75rem;
+  font-weight:700;
+}
+.streak-pill .fire{font-size:1rem}
+.lv-badge{
+  background:var(--accent5);color:#fff;border-radius:100px;
+  padding:3px 9px;font-size:0.7rem;font-weight:800;
+}
+
+/* ── NAV TABS ── */
+.nav-scroll{
+  display:flex;overflow-x:auto;gap:4px;
+  padding:8px 12px;background:var(--surface);
+  border-bottom:1px solid var(--border);
+  scrollbar-width:none;
+}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav-btn{
+  flex-shrink:0;display:flex;align-items:center;gap:5px;
+  background:transparent;border:1.5px solid transparent;
+  border-radius:100px;padding:6px 13px;
+  font-size:0.78rem;font-weight:700;color:var(--muted);
+  white-space:nowrap;transition:all 0.15s;
+}
+.nav-btn:hover{color:var(--text);border-color:var(--border)}
+.nav-btn.active{
+  background:var(--accent-glow);border-color:var(--accent);
+  color:var(--accent);
+}
+.nav-btn .nb-icon{font-size:1rem}
+
+/* ── PAGES ── */
+.page{display:none;padding:16px;max-width:700px;margin:0 auto;padding-bottom:80px}
+.page.active{display:block;animation:fadeIn 0.2s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── HERO (Practice page) ── */
+.hero{
+  background:linear-gradient(135deg,#1a2840 0%,#1c2f1e 100%);
+  border:1px solid var(--border);border-radius:16px;
+  padding:20px;margin-bottom:16px;position:relative;overflow:hidden;
+}
+.hero::before{
+  content:'🧬';position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  font-size:4rem;opacity:0.12;
+}
+.hero h1{font-size:1.4rem;font-weight:900;line-height:1.2;margin-bottom:4px}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:0.82rem;color:var(--muted)}
+
+/* ── DAILY GOAL BAR ── */
+.goal-bar{
+  background:var(--card);border:1px solid var(--border);
+  border-radius:var(--radius);padding:12px 16px;margin-bottom:16px;
+  display:flex;align-items:center;gap:12px;
+}
+.goal-bar-track{flex:1;height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.goal-bar-fill{height:100%;background:linear-gradient(90deg,var(--accent),#7ee787);border-radius:4px;transition:width 0.5s}
+.goal-label{font-size:0.75rem;color:var(--muted);font-family:'DM Mono',monospace;white-space:nowrap}
+.goal-val{font-weight:800;color:var(--accent)}
+
+/* ── SELECTORS ── */
+.selector-row{display:flex;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.selector{
+  flex:1;min-width:120px;background:var(--card);
+  border:1.5px solid var(--border);border-radius:10px;
+  padding:8px 10px;color:var(--text);font-family:'Nunito',sans-serif;
+  font-size:0.82rem;font-weight:600;outline:none;
+  appearance:none;cursor:pointer;
+}
+.selector:focus{border-color:var(--accent4)}
+.selector option{background:var(--card)}
+
+/* ── QUESTION CARD ── */
+.q-card{
+  background:var(--card);border:1.5px solid var(--border);
+  border-radius:16px;padding:20px;margin-bottom:14px;
+  animation:fadeIn 0.25s ease;
+}
+.q-card-header{
+  display:flex;align-items:center;gap:8px;margin-bottom:14px;flex-wrap:wrap;
+}
+.q-tag{
+  background:rgba(88,166,255,0.12);border:1px solid rgba(88,166,255,0.25);
+  color:var(--accent4);border-radius:100px;padding:2px 10px;
+  font-size:0.68rem;font-family:'DM Mono',monospace;letter-spacing:1px;
+}
+.q-tag.hard{background:rgba(248,81,73,0.12);border-color:rgba(248,81,73,0.25);color:var(--accent2)}
+.q-tag.easy{background:rgba(63,185,80,0.12);border-color:rgba(63,185,80,0.25);color:var(--accent)}
+.q-num{font-size:0.72rem;color:var(--muted);font-family:'DM Mono',monospace;margin-left:auto}
+.q-text{font-size:1rem;font-weight:700;line-height:1.45;margin-bottom:16px}
+
+/* MCQ options */
+.opts{display:grid;gap:9px}
+.opt-btn{
+  display:flex;align-items:center;gap:10px;
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:10px;padding:11px 14px;
+  text-align:left;color:var(--text);font-size:0.88rem;font-weight:600;
+  transition:all 0.15s;
+}
+.opt-btn:hover:not(:disabled){border-color:var(--accent4);background:rgba(88,166,255,0.06)}
+.opt-letter{
+  font-family:'DM Mono',monospace;font-size:0.72rem;
+  background:var(--border);border-radius:6px;
+  width:24px;height:24px;display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;transition:all 0.15s;font-weight:500;
+}
+.opt-btn:hover:not(:disabled) .opt-letter{background:var(--accent4);color:#0d1117}
+.opt-btn.correct{border-color:var(--accent);background:rgba(63,185,80,0.1)}
+.opt-btn.correct .opt-letter{background:var(--accent);color:#0d1117}
+.opt-btn.wrong{border-color:var(--accent2);background:rgba(248,81,73,0.1)}
+.opt-btn.wrong .opt-letter{background:var(--accent2);color:#fff}
+.opt-btn:disabled{cursor:default}
+
+/* fill-in */
+.fill-input{
+  width:100%;background:var(--surface);border:1.5px solid var(--border);
+  border-radius:10px;padding:11px 14px;color:var(--text);font-size:0.95rem;
+  font-family:'Nunito',sans-serif;outline:none;margin-bottom:10px;transition:border-color 0.2s;
+}
+.fill-input:focus{border-color:var(--accent4)}
+.fill-input.correct{border-color:var(--accent)}
+.fill-input.wrong{border-color:var(--accent2)}
+
+/* action buttons */
+.btn-row{display:flex;gap:8px;margin-top:4px;flex-wrap:wrap}
+.btn{
+  flex:1;min-width:90px;padding:11px 16px;border-radius:10px;
+  font-size:0.85rem;font-weight:800;border:none;transition:all 0.15s;
+}
+.btn:hover{transform:translateY(-1px)}
+.btn-green{background:var(--accent);color:#0d1117}
+.btn-blue{background:transparent;border:1.5px solid var(--accent4);color:var(--accent4)}
+.btn-ghost{background:transparent;border:1.5px solid var(--border);color:var(--muted)}
+.btn-ghost:hover{color:var(--text);border-color:var(--muted)}
+.btn-red{background:transparent;border:1.5px solid var(--accent2);color:var(--accent2)}
+
+/* explanation */
+.explanation{
+  margin-top:12px;background:rgba(63,185,80,0.06);
+  border:1px solid rgba(63,185,80,0.2);border-radius:10px;
+  padding:12px 14px;font-size:0.82rem;line-height:1.6;
+  display:none;animation:fadeIn 0.2s ease;
+}
+.explanation.show{display:block}
+.explanation .expl-label{color:var(--accent);font-weight:800;margin-bottom:4px}
+
+/* ── XP TOAST ── */
+.xp-toast{
+  position:fixed;top:70px;right:16px;z-index:999;
+  background:var(--accent);color:#0d1117;
+  border-radius:100px;padding:8px 16px;
+  font-weight:800;font-size:0.85rem;
+  opacity:0;transform:translateY(-10px);transition:all 0.3s;pointer-events:none;
+}
+.xp-toast.show{opacity:1;transform:translateY(0)}
+
+/* ── SECTION LABELS ── */
+.section-label{
+  font-size:0.68rem;letter-spacing:2px;text-transform:uppercase;
+  color:var(--muted);margin-bottom:10px;font-family:'DM Mono',monospace;
+}
+.section-title{
+  font-size:1.1rem;font-weight:900;margin-bottom:12px;
+  display:flex;align-items:center;gap:8px;
+}
+
+/* ── TOPIC CARDS ── */
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin-bottom:20px}
+.topic-card{
+  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
+  padding:16px 14px;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;
+}
+.topic-card.sel{border-color:var(--accent);background:rgba(63,185,80,0.08)}
+.topic-card:hover{transform:translateY(-2px);border-color:var(--accent4)}
+.topic-icon{font-size:1.6rem;margin-bottom:8px}
+.topic-name{font-size:0.82rem;font-weight:800;line-height:1.2}
+.topic-count{font-size:0.7rem;color:var(--muted);margin-top:4px;font-family:'DM Mono',monospace}
+.topic-sub-text{font-size:0.65rem;color:var(--muted);margin-top:6px;line-height:1.3;opacity:0.8}
+.topic-prog{height:3px;background:var(--border);border-radius:2px;margin-top:8px;overflow:hidden}
+.topic-prog-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.5s}
+
+/* ── FLASHCARD ── */
+.fc-wrap{perspective:1200px;margin-bottom:16px;cursor:pointer}
+.fc-inner{
+  position:relative;min-height:200px;transform-style:preserve-3d;
+  transition:transform 0.5s cubic-bezier(.4,0,.2,1);
+}
+.fc-inner.flipped{transform:rotateY(180deg)}
+.fc-face{
+  position:absolute;width:100%;min-height:200px;
+  backface-visibility:hidden;background:var(--card);
+  border:1.5px solid var(--border);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;
+  padding:28px 24px;text-align:center;
+}
+.fc-back{transform:rotateY(180deg)}
+.fc-label{font-size:0.68rem;color:var(--accent);font-family:'DM Mono',monospace;letter-spacing:2px;margin-bottom:12px}
+.fc-text{font-size:1.05rem;font-weight:700;line-height:1.45}
+.fc-body{width:100%}
+.fc-hint{font-size:0.78rem;color:var(--muted);text-align:center;margin-bottom:12px}
+.fc-nav{display:flex;gap:10px}
+.fc-nav-btn{
+  flex:1;padding:11px;border-radius:10px;font-weight:800;font-size:0.85rem;
+  background:transparent;transition:all 0.15s;
+}
+.fc-nav-btn.knew{border:1.5px solid var(--accent);color:var(--accent)}
+.fc-nav-btn.knew:hover{background:rgba(63,185,80,0.1)}
+.fc-nav-btn.skip{border:1.5px solid var(--accent2);color:var(--accent2)}
+.fc-nav-btn.skip:hover{background:rgba(248,81,73,0.1)}
+.fc-progress{
+  display:flex;align-items:center;gap:10px;margin-bottom:14px;
+  font-size:0.75rem;color:var(--muted);font-family:'DM Mono',monospace;
+}
+.fc-progress-track{flex:1;height:4px;background:var(--border);border-radius:2px;overflow:hidden}
+.fc-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent4));border-radius:2px;transition:width 0.4s}
+
+/* ── PROGRESS BARS (quiz) ── */
+.q-progress{height:4px;background:var(--border);border-radius:2px;margin-bottom:20px;overflow:hidden}
+.q-progress-fill{height:100%;background:linear-gradient(90deg,var(--accent),var(--accent4));border-radius:2px;transition:width 0.4s}
+
+/* ── RESULTS ── */
+.results-hero{
+  background:var(--card);border:1px solid var(--border);border-radius:16px;
+  padding:28px;text-align:center;margin-bottom:16px;animation:fadeIn 0.4s ease;
+}
+.score-ring{width:130px;height:130px;margin:0 auto 16px;position:relative}
+.score-ring svg{transform:rotate(-90deg)}
+.score-ring-text{
+  position:absolute;inset:0;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+}
+.score-big{font-size:2.2rem;font-weight:900;line-height:1}
+.score-lbl{font-size:0.68rem;color:var(--muted);font-family:'DM Mono',monospace;letter-spacing:1px}
+.grade-pill{
+  display:inline-block;font-weight:900;font-size:1.1rem;
+  padding:6px 20px;border-radius:100px;margin-bottom:10px;
+}
+.res-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.res-item{background:var(--surface);border-radius:10px;padding:12px;text-align:center;font-family:'DM Mono',monospace}
+.res-val{font-size:1.3rem;font-weight:700}
+.res-key{font-size:0.65rem;color:var(--muted);margin-top:2px;letter-spacing:1px}
+
+/* ── MOCK EXAM ── */
+.exam-hero{
+  background:linear-gradient(135deg,#1a2840,#1e1a2e);
+  border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:16px;
+}
+.exam-hero h2{font-size:1.1rem;font-weight:900;margin-bottom:6px}
+.exam-hero p{font-size:0.8rem;color:var(--muted);line-height:1.5}
+.exam-cards{display:grid;gap:12px;margin-bottom:16px}
+.exam-card{
+  background:var(--card);border:1.5px solid var(--border);border-radius:14px;padding:18px;
+  display:flex;align-items:center;gap:14px;cursor:pointer;transition:all 0.18s;
+}
+.exam-card:hover{border-color:var(--accent4);transform:translateY(-1px)}
+.exam-card .ec-icon{font-size:2rem}
+.exam-card .ec-title{font-weight:900;font-size:0.95rem}
+.exam-card .ec-desc{font-size:0.78rem;color:var(--muted);margin-top:2px}
+.exam-timer-bar{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:10px 16px;margin-bottom:14px;
+  display:flex;align-items:center;gap:12px;
+}
+.exam-timer-val{font-family:'DM Mono',monospace;font-size:1.1rem;font-weight:700;color:var(--accent3)}
+.exam-marks{font-family:'DM Mono',monospace;font-size:0.78rem;color:var(--muted);margin-left:auto}
+
+/* ── FORMULA SHEET ── */
+.formula-section{margin-bottom:20px}
+.formula-section h3{
+  font-size:0.9rem;font-weight:800;color:var(--accent4);
+  margin-bottom:10px;padding-bottom:6px;
+  border-bottom:1px solid var(--border);
+}
+.formula-cards{display:grid;gap:8px}
+.formula-card{
+  background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px 14px;
+}
+.formula-name{font-size:0.75rem;color:var(--muted);margin-bottom:4px;font-weight:700}
+.formula-val{font-family:'DM Mono',monospace;font-size:0.88rem;color:var(--text);line-height:1.6}
+
+/* ── LINKS PAGE ── */
+.links-grid{display:grid;gap:10px}
+.link-card{
+  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
+  padding:14px 16px;text-decoration:none;color:var(--text);
+  display:flex;align-items:center;gap:12px;transition:all 0.15s;
+}
+.link-card:hover{border-color:var(--accent4);transform:translateX(4px)}
+.link-icon{font-size:1.6rem;flex-shrink:0}
+.link-title{font-weight:800;font-size:0.9rem}
+.link-desc{font-size:0.75rem;color:var(--muted);margin-top:2px}
+
+/* ── SETTINGS PAGE ── */
+.settings-card{
+  background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:16px;margin-bottom:12px;
+}
+.settings-card h3{font-size:0.85rem;font-weight:800;color:var(--accent4);margin-bottom:12px}
+.setting-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.setting-label{font-size:0.85rem;flex:1}
+.setting-input{
+  background:var(--surface);border:1.5px solid var(--border);border-radius:8px;
+  padding:6px 10px;color:var(--text);font-family:'Nunito',sans-serif;
+  font-size:0.85rem;outline:none;width:100px;
+}
+.setting-input:focus{border-color:var(--accent4)}
+
+/* ── PROGRESS PAGE ── */
+.prog-stat-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+.prog-stat{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:14px;text-align:center;
+}
+.prog-stat-val{font-size:1.6rem;font-weight:900;color:var(--accent)}
+.prog-stat-key{font-size:0.72rem;color:var(--muted);margin-top:2px;font-family:'DM Mono',monospace}
+.prog-topic-row{
+  display:flex;align-items:center;gap:10px;
+  background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:12px 14px;margin-bottom:8px;
+}
+.prog-topic-name{font-size:0.85rem;font-weight:700;flex:1}
+.prog-topic-bar-wrap{flex:2}
+.prog-topic-bar{height:8px;background:var(--border);border-radius:4px;overflow:hidden}
+.prog-topic-fill{height:100%;background:var(--accent);border-radius:4px;transition:width 0.5s}
+.prog-topic-pct{font-family:'DM Mono',monospace;font-size:0.72rem;color:var(--muted);width:36px;text-align:right}
+
+/* ── WORKSHEET styles (inline) ── */
+.ws-section-head{
+  font-size:0.88rem;font-weight:900;color:var(--accent);
+  margin:18px 0 10px;padding-bottom:6px;border-bottom:1px solid var(--border);
+}
+.ws-q{
+  background:var(--card);border:1.5px solid var(--border);border-radius:14px;
+  padding:16px;margin-bottom:12px;transition:border-color 0.2s;
+}
+.ws-q.ok{border-color:var(--accent)}
+.ws-q.bad{border-color:var(--accent2)}
+.ws-qlabel{font-size:0.65rem;font-family:'DM Mono',monospace;color:var(--muted);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.ws-qtext{font-weight:700;font-size:0.93rem;line-height:1.4;margin-bottom:11px}
+.ws-opts2{display:grid;gap:7px}
+.ws-opt2{
+  display:flex;align-items:center;gap:9px;
+  background:var(--surface);border:1.5px solid var(--border);border-radius:9px;
+  padding:9px 13px;cursor:pointer;font-size:0.83rem;font-weight:600;
+  transition:all 0.14s;color:var(--text);
+}
+.ws-opt2:hover:not(:disabled){border-color:var(--accent4)}
+.ws-opt2 .wol{
+  font-family:'DM Mono',monospace;font-size:0.68rem;background:var(--border);
+  border-radius:5px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.ws-opt2.wc{border-color:var(--accent);background:rgba(63,185,80,0.1)}
+.ws-opt2.wc .wol{background:var(--accent);color:#0d1117}
+.ws-opt2.ww{border-color:var(--accent2);background:rgba(248,81,73,0.1)}
+.ws-opt2.ww .wol{background:var(--accent2);color:#fff}
+.ws-opt2:disabled{cursor:default}
+.ws-eq{
+  background:var(--surface);border:1px solid var(--border);border-radius:8px;
+  padding:12px 14px;font-family:'DM Mono',monospace;font-size:0.82rem;
+  line-height:2.4;margin-bottom:10px;
+}
+.eq-in{
+  background:transparent;border:none;border-bottom:2px solid var(--accent4);
+  color:var(--text);font-family:'DM Mono',monospace;font-size:0.82rem;
+  min-width:90px;text-align:center;outline:none;padding:0 4px;
+}
+.eq-in.ec{border-color:var(--accent);color:var(--accent)}
+.eq-in.ew{border-color:var(--accent2);color:var(--accent2)}
+.ws-ta{
+  width:100%;background:var(--surface);border:1.5px solid var(--border);
+  border-radius:9px;padding:10px 13px;color:var(--text);font-size:0.85rem;
+  font-family:'Nunito',sans-serif;outline:none;resize:vertical;min-height:70px;
+  margin-bottom:10px;transition:border-color 0.2s;
+}
+.ws-ta:focus{border-color:var(--accent4)}
+.ws-ta.ec{border-color:var(--accent)}
+.ws-ta.ew{border-color:var(--accent2)}
+.ws-check{
+  background:transparent;border:1.5px solid var(--accent4);color:var(--accent4);
+  border-radius:8px;padding:7px 15px;font-family:'Nunito',sans-serif;
+  font-weight:800;font-size:0.78rem;cursor:pointer;transition:all 0.14s;
+}
+.ws-check:hover{background:rgba(88,166,255,0.1)}
+.ws-check:disabled{opacity:0.4;cursor:default}
+.ws-reveal{
+  margin-top:10px;background:rgba(63,185,80,0.06);border:1px solid rgba(63,185,80,0.2);
+  border-radius:8px;padding:10px 13px;font-size:0.8rem;line-height:1.55;display:none;
+}
+.ws-reveal.show{display:block}
+.ws-reveal strong{color:var(--accent)}
+.pun-tbl{border-collapse:collapse}
+.pun-tbl td,.pun-tbl th{border:1.5px solid var(--border);width:68px;height:48px;text-align:center;vertical-align:middle}
+.pun-tbl th{background:rgba(63,185,80,0.1);color:var(--accent);font-family:'DM Mono',monospace;font-size:0.8rem;font-weight:600}
+.pun-in{background:transparent;border:none;outline:none;text-align:center;font-family:'DM Mono',monospace;font-size:0.85rem;color:var(--text);width:60px;cursor:pointer}
+.pun-cell{background:var(--surface)}
+.pun-cell.pc{background:rgba(63,185,80,0.15);color:var(--accent)}
+.pun-cell.pw{background:rgba(248,81,73,0.12);color:var(--accent2)}
+.ws-score-strip{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:12px 16px;margin-bottom:16px;display:flex;align-items:center;gap:12px;
+}
+.ws-score-num{font-size:1.5rem;font-weight:900;color:var(--accent);font-family:'DM Mono',monospace}
+.ws-score-detail{flex:1}
+.ws-score-msg{font-size:0.78rem;color:var(--muted)}
+.ws-score-track{height:4px;background:var(--border);border-radius:2px;margin-top:6px;overflow:hidden}
+.ws-score-fill{height:100%;background:var(--accent);border-radius:2px;transition:width 0.5s}
+.ws-tab-row{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.ws-tab-row::-webkit-scrollbar{display:none}
+.ws-tab{
+  flex-shrink:0;background:var(--card);border:1.5px solid var(--border);border-radius:100px;
+  padding:7px 14px;cursor:pointer;font-weight:800;font-size:0.78rem;color:var(--muted);transition:all 0.15s;
+}
+.ws-tab:hover{color:var(--text)}
+.ws-tab.wta{border-color:var(--accent);color:var(--accent);background:rgba(63,185,80,0.08)}
+.ws-sheet2{display:none}
+.ws-sheet2.wsa{display:block;animation:fadeIn 0.25s ease}
+.ws-action-row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+
+/* ── EXAM TIPS ── */
+.tip-card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  padding:13px 15px;margin-bottom:8px;display:flex;align-items:flex-start;gap:10px;
+}
+.tip-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+.tip-text{font-size:0.82rem;line-height:1.5}
+.tip-text strong{color:var(--accent)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:480px){
+  .res-grid{grid-template-columns:1fr 1fr}
+  .prog-stat-grid{grid-template-columns:1fr 1fr}
+  .topic-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- XP Toast -->
+<div class="xp-toast" id="xp-toast">+10 XP ⭐</div>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-logo">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Nat 5 <span>History</span></div>
+  <div class="xp-pill">⭐ <span class="xp-val" id="xp-val">0</span> XP</div>
+  <div class="streak-pill"><span class="fire">🔥</span><span id="streak-val">0</span></div>
+  <div class="lv-badge" id="lv-badge">Lv 1</div>
+</div>
+
+<!-- NAV TABS -->
+<div class="nav-scroll">
+  <button class="nav-btn active" onclick="nav('practice')" data-page="practice"><span class="nb-icon">📚</span> Practice</button>
+  <button class="nav-btn" onclick="nav('flashcards')" data-page="flashcards"><span class="nb-icon">🃏</span> Flashcards</button>
+  <button class="nav-btn" onclick="nav('worksheet')" data-page="worksheet"><span class="nb-icon">📝</span> Worksheets</button>
+  <button class="nav-btn" onclick="nav('mock')" data-page="mock"><span class="nb-icon">📋</span> Mock Exam</button>
+  <button class="nav-btn" onclick="nav('topics')" data-page="topics"><span class="nb-icon">🗂</span> Topics</button>
+  <button class="nav-btn" onclick="nav('formulas')" data-page="formulas"><span class="nb-icon">🔬</span> Key Facts</button>
+  <button class="nav-btn" onclick="nav('progress')" data-page="progress"><span class="nb-icon">📊</span> Progress</button>
+  <button class="nav-btn" onclick="nav('links')" data-page="links"><span class="nb-icon">🔗</span> Links</button>
+  <button class="nav-btn" onclick="nav('settings')" data-page="settings"><span class="nb-icon">⚙️</span> Settings</button>
+</div>
+
+<!-- ═══════════════ PRACTICE PAGE ═══════════════ -->
+<div class="page active" id="page-practice">
+  <div class="hero">
+    <h1>🏴󠁧󠁢󠁳󠁣󠁴󠁿 Nat 5 <span>History</span><br>Scotland</h1>
+    <p>SQA-verified · 62 questions · 4 topics · earn XP as you go!</p>
+  </div>
+
+  <div class="goal-bar" id="goal-bar">
+    <span style="font-size:1.1rem">🎯</span>
+    <div class="goal-bar-track"><div class="goal-bar-fill" id="goal-fill" style="width:0%"></div></div>
+    <div class="goal-label">Daily Goal <span class="goal-val" id="goal-txt">0/10</span></div>
+  </div>
+
+  <div class="section-label">Choose topic & mode</div>
+  <div class="selector-row">
+    <select class="selector" id="topic-sel">
+      <option value="all">🎲 Random Mix</option>
+      <option value="greatwar">⚔️ Era of the Great War</option>
+      <option value="slavery">⛓️ Trade in Enslaved Africans</option>
+      <option value="civil">✊ Free at Last? Civil Rights</option>
+      <option value="skills">📜 History Skills</option>
+    </select>
+    <select class="selector" id="type-sel">
+      <option value="all">All Types</option>
+      <option value="mcq">Multiple Choice</option>
+      <option value="fillin">Fill in Blank</option>
+    </select>
+  </div>
+
+  <div id="q-progress-wrap">
+    <div class="q-progress"><div class="q-progress-fill" id="q-progress-fill" style="width:0%"></div></div>
+  </div>
+
+  <div id="question-area">
+    <div class="q-card">
+      <div style="text-align:center;color:var(--muted);padding:20px">
+        <div style="font-size:2rem;margin-bottom:10px">🔬</div>
+        Press New Question to start!
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-row" style="margin-top:0">
+    <button class="btn btn-green" onclick="newQuestion()">⟳ New Question</button>
+    <button class="btn btn-ghost" onclick="nav('mock')">📋 Mock Exam</button>
+  </div>
+</div>
+
+<!-- ═══════════════ FLASHCARDS PAGE ═══════════════ -->
+<div class="page" id="page-flashcards">
+  <div class="section-title">🃏 Flashcards</div>
+
+  <div class="selector-row" style="margin-bottom:12px">
+    <select class="selector" id="fc-topic-sel">
+      <option value="all">All Topics</option>
+      <option value="greatwar">⚔️ Era of the Great War</option>
+      <option value="slavery">⛓️ Trade in Enslaved Africans</option>
+      <option value="civil">✊ Free at Last? Civil Rights</option>
+      <option value="skills">📜 History Skills</option>
+    </select>
+    <button class="btn btn-blue" onclick="startFlashcards()" style="flex:0;padding:8px 16px;border-radius:10px;font-size:0.82rem">▶ Start</button>
+  </div>
+
+  <div class="fc-progress">
+    <span id="fc-prog-txt">0 / 0</span>
+    <div class="fc-progress-track"><div class="fc-progress-fill" id="fc-prog-fill" style="width:0%"></div></div>
+    <span style="color:var(--accent)">✓ <span id="fc-knew-txt">0</span></span>
+  </div>
+
+  <div class="fc-hint" id="fc-hint">👆 Tap the card to flip it</div>
+
+  <div class="fc-wrap" onclick="flipCard()" id="fc-wrap">
+    <div class="fc-inner" id="fc-inner">
+      <div class="fc-face fc-front">
+        <div class="fc-body">
+          <div class="fc-label">QUESTION</div>
+          <div class="fc-text" id="fc-front-text">Select a topic and press Start to begin</div>
+        </div>
+      </div>
+      <div class="fc-face fc-back">
+        <div class="fc-body">
+          <div class="fc-label" style="color:var(--accent4)">ANSWER</div>
+          <div class="fc-text" id="fc-back-text" style="font-size:0.92rem;font-weight:600;color:var(--text)">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="fc-nav">
+    <button class="fc-nav-btn skip" onclick="fcNext(false)">✕ Didn't know</button>
+    <button class="fc-nav-btn knew" onclick="fcNext(true)">✓ Got it!</button>
+  </div>
+</div>
+
+<!-- ═══════════════ WORKSHEET PAGE ═══════════════ -->
+<div class="page" id="page-worksheet">
+  <div class="section-title">📝 Interactive Worksheets</div>
+  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px">SQA-style written questions · instant feedback · self-marked</p>
+
+  <div id="ws-score-strip" class="ws-score-strip" style="display:none">
+    <div class="ws-score-num" id="ws-score-num">0/0</div>
+    <div class="ws-score-detail">
+      <div class="ws-score-msg" id="ws-score-msg">Answer questions to see your score</div>
+      <div class="ws-score-track"><div class="ws-score-fill" id="ws-score-fill2" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <div class="ws-tab-row">
+    <button class="ws-tab wta" onclick="wsSwitchSheet(0)">⚔️ Great War</button>
+    <button class="ws-tab" onclick="wsSwitchSheet(1)">⛓️ Enslaved Africans</button>
+    <button class="ws-tab" onclick="wsSwitchSheet(2)">✊ Civil Rights</button>
+  </div>
+
+  <!-- SHEET 0: Great War -->
+  <div class="ws-sheet2 wsa" id="wss-0">
+    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
+      <strong>SQA Key Issues:</strong> Scots on the Western Front · Domestic impact: society &amp; culture · Domestic impact: industry &amp; economy · Domestic impact: politics
+    </div>
+    <div class="ws-section-head">Section A — The Western Front & Home Front</div>
+
+    <div class="ws-q" id="wq-gw1" data-done="0">
+      <div class="ws-qlabel">Q1 · Multiple Choice</div>
+      <div class="ws-qtext">At the START of the First World War, how did Britain build up its army?</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw1',this,false)"><span class="wol">A</span>Conscription — all men were legally required to serve immediately</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw1',this,true)"><span class="wol">B</span>Voluntary recruitment — men chose to enlist, encouraged by propaganda, Pals Battalions, and social pressure</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw1',this,false)"><span class="wol">C</span>Britain used only professional soldiers already in the regular army</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw1',this,false)"><span class="wol">D</span>Women were recruited first before men</div>
+      </div>
+      <div class="ws-reveal" id="wq-gw1-r"><strong>B — Voluntary recruitment.</strong> Britain used voluntary recruitment from August 1914, encouraged by massive propaganda campaigns (Kitchener posters), the Pals Battalions system, and social pressure. Over 2 million men volunteered. Conscription was only introduced in January 1916 when voluntary recruitment failed to meet demand.</div>
+    </div>
+
+    <div class="ws-q" id="wq-gw2" data-done="0">
+      <div class="ws-qlabel">Q2 · Short Answer (4 marks)</div>
+      <div class="ws-qtext">Describe the conditions experienced by soldiers in the trenches on the Western Front. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-gw2-ta" placeholder="Give 4 specific, developed factual points about trench conditions..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-gw2')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-gw2-r"><strong>Model answer — 1 mark per developed point:</strong><br>
+      • Soldiers suffered from <strong>"trench foot"</strong> — caused by standing in waterlogged, muddy trenches for long periods, which caused the feet to swell and rot. (1)<br>
+      • Trenches were infested with <strong>rats and lice</strong>, which caused disease and extreme discomfort. (1)<br>
+      • Soldiers suffered from <strong>shell shock</strong> (PTSD) — a psychological condition caused by the constant noise, fear, and trauma of warfare. (1)<br>
+      • Soldiers faced the constant danger of <strong>shellfire and snipers</strong> — simply looking over the parapet of a trench could result in death. (1)<br>
+      • Men lived in <strong>muddy, cramped conditions</strong> with poor food, cold temperatures, and little sleep. (1)</div>
+    </div>
+
+    <div class="ws-q" id="wq-gw3" data-done="0">
+      <div class="ws-qlabel">Q3 · Multiple Choice</div>
+      <div class="ws-qtext">What was the main significance of the 1918 Representation of the People Act?</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw3',this,false)"><span class="wol">A</span>It gave all women the vote on equal terms with men</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw3',this,true)"><span class="wol">B</span>It gave all men over 21 the vote AND women over 30 (with property qualifications) the vote — tripling the electorate</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw3',this,false)"><span class="wol">C</span>It gave only soldiers returning from the war the right to vote</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw3',this,false)"><span class="wol">D</span>It reduced the voting age to 18 for men and women</div>
+      </div>
+      <div class="ws-reveal" id="wq-gw3-r"><strong>B.</strong> The 1918 Act gave the vote to all men over 21 (previously excluded working-class men now included) AND to women over 30 who met a property qualification. Women's war work in munitions factories, transport, and offices was a key argument for extending the vote to women. Full equal suffrage came in 1928.</div>
+    </div>
+
+    <div class="ws-q" id="wq-gw4" data-done="0">
+      <div class="ws-qlabel">Q4 · Explain Question (4 marks)</div>
+      <div class="ws-qtext">Explain why conscription was introduced in Britain in January 1916. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-gw4-ta" placeholder="Give reasons WHY conscription was introduced (not just what it was)..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-gw4')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-gw4-r"><strong>Model answer — 1 mark per developed reason:</strong><br>
+      • <strong>Voluntary recruitment was not producing enough soldiers</strong> — by 1915 the rate of volunteering had fallen sharply as the reality of trench warfare became known. (1)<br>
+      • <strong>Huge casualties needed to be replaced</strong> — battles like Loos (1915) resulted in massive losses that voluntary recruitment could not make good. (1)<br>
+      • <strong>Skilled workers were joining up unnecessarily</strong> — the government needed to ensure men in reserved occupations (e.g. munitions workers) stayed in their jobs rather than enlisting. (1)<br>
+      • <strong>Germany had conscription</strong>, giving it a larger army — Britain needed to match German manpower to have a chance of winning the war. (1)</div>
+    </div>
+
+    <div class="ws-q" id="wq-gw5" data-done="0">
+      <div class="ws-qlabel">Q5 · Multiple Choice</div>
+      <div class="ws-qtext">What was the significance of the Glasgow Rent Strike of 1915?</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw5',this,false)"><span class="wol">A</span>It failed and rents continued to rise throughout the war</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw5',this,true)"><span class="wol">B</span>Organised mainly by working-class women, it forced the government to pass the Rent Restriction Act 1915, freezing rents for the rest of the war</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw5',this,false)"><span class="wol">C</span>It was a strike by munitions workers demanding higher wages</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-gw5',this,false)"><span class="wol">D</span>It only affected one area of Glasgow and had little impact</div>
+      </div>
+      <div class="ws-reveal" id="wq-gw5-r"><strong>B — Rent Restriction Act 1915.</strong> With men away fighting, landlords raised rents knowing tenants were vulnerable. Women like Mary Barbour organised mass refusals to pay. The strike spread to 20,000 households. The government, needing industrial peace for the war effort, froze rents with the Rent Restriction Act. It showed women\'s political power even without the vote.</div>
+    </div>
+
+    <div class="ws-action-row">
+      <button class="btn btn-green" onclick="wsMarkAll(0)" style="flex:1">Mark All</button>
+      <button class="btn btn-ghost" onclick="wsReset2(0)" style="flex:1">Reset</button>
+    </div>
+  </div>
+
+  <!-- SHEET 1: Trade in Enslaved Africans -->
+  <div class="ws-sheet2" id="wss-1">
+    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
+      <strong>SQA Key Issues:</strong> Triangular trade · Britain and the Caribbean · Captives' experience &amp; resistance · Abolitionist campaign · Reasons for success
+    </div>
+    <div class="ws-section-head">Section A — The Trade & Abolitionist Campaign</div>
+
+    <div class="ws-q" id="wq-sl1" data-done="0">
+      <div class="ws-qlabel">Q1 · Multiple Choice</div>
+      <div class="ws-qtext">Describe the THREE stages of the Triangular Trade.</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-sl1',this,false)"><span class="wol">A</span>Britain → Africa (enslaved Africans) → Caribbean (goods) → Britain</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-sl1',this,true)"><span class="wol">B</span>Britain (manufactured goods) → Africa → Caribbean (enslaved Africans) → Britain (plantation produce)</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-sl1',this,false)"><span class="wol">C</span>Africa → Britain (goods) → Caribbean (goods) → Africa</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-sl1',this,false)"><span class="wol">D</span>Caribbean → Britain → Africa → Caribbean</div>
+      </div>
+      <div class="ws-reveal" id="wq-sl1-r"><strong>B.</strong> Stage 1: British ships took manufactured goods (guns, cloth, alcohol) to West Africa and traded them for enslaved Africans. Stage 2 (Middle Passage): enslaved Africans were transported to the Caribbean/Americas. Stage 3: ships returned to Britain with plantation produce (sugar, tobacco, cotton). Each stage generated profit.</div>
+    </div>
+
+    <div class="ws-q" id="wq-sl2" data-done="0">
+      <div class="ws-qlabel">Q2 · Short Answer (4 marks)</div>
+      <div class="ws-qtext">Describe the conditions experienced by enslaved Africans during the Middle Passage. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-sl2-ta" placeholder="Give 4 specific, developed factual points about Middle Passage conditions..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-sl2')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-sl2-r"><strong>Model answer — 1 mark per developed point:</strong><br>
+      • Enslaved Africans were <strong>packed tightly into the ship's hold</strong>, chained in rows with minimal space — many could not sit upright. (1)<br>
+      • <strong>Disease spread rapidly</strong> in the overcrowded conditions — dysentery, smallpox, and dehydration killed 10-20% of captives on average. (1)<br>
+      • Captives had <strong>minimal food and water</strong> — barely enough to survive the 6-8 week voyage. (1)<br>
+      • Some enslaved Africans <strong>attempted rebellion</strong> on ships during the Middle Passage, or took their own lives rather than face enslavement. (1)<br>
+      • Conditions were so traumatic that many <strong>arrived mentally and physically broken</strong> after the journey. (1)</div>
+    </div>
+
+    <div class="ws-q" id="wq-sl3" data-done="0">
+      <div class="ws-qlabel">Q3 · Explain Question (4 marks)</div>
+      <div class="ws-qtext">Explain why the abolitionist campaign was successful in getting the Slave Trade Act passed in 1807. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-sl3-ta" placeholder="Give reasons WHY the campaign succeeded — not just what happened..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-sl3')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-sl3-r"><strong>Model answer — 1 mark per developed reason:</strong><br>
+      • <strong>Powerful evidence gathering by Thomas Clarkson</strong> — his evidence of conditions on slave ships (including the diagram of the Brookes) shocked Parliament and public opinion, making the trade impossible to defend morally. (1)<br>
+      • <strong>First-hand testimony by Olaudah Equiano</strong> — his autobiography gave the trade a human face and was widely read, building enormous public sympathy for abolition. (1)<br>
+      • <strong>Sustained Parliamentary campaigning by Wilberforce</strong> — he introduced abolition bills every year for 20 years, keeping the issue alive in Parliament until circumstances allowed success. (1)<br>
+      • <strong>Growing public opinion</strong> — large-scale petitioning campaigns (including a national sugar boycott) showed Parliament the strength of public feeling against the trade. (1)<br>
+      • <strong>Political and economic circumstances</strong> — the French Revolutionary Wars reduced the trade's profitability and changed the political calculation in Parliament. (1)</div>
+    </div>
+
+    <div class="ws-action-row">
+      <button class="btn btn-green" onclick="wsMarkAll(1)" style="flex:1">Mark All</button>
+      <button class="btn btn-ghost" onclick="wsReset2(1)" style="flex:1">Reset</button>
+    </div>
+  </div>
+
+  <!-- SHEET 2: Civil Rights -->
+  <div class="ws-sheet2" id="wss-2">
+    <div style="background:rgba(88,166,255,0.07);border:1px solid rgba(88,166,255,0.2);border-radius:10px;padding:11px 14px;margin-bottom:14px;font-size:0.78rem;color:var(--accent4);line-height:1.5">
+      <strong>SQA Key Issues:</strong> Open Door &amp; immigration · Separate but equal · Civil rights campaigns to 1968 · Ghettos &amp; Black American radicalism
+    </div>
+    <div class="ws-section-head">Section A — Jim Crow & Civil Rights Campaigns</div>
+
+    <div class="ws-q" id="wq-cr1" data-done="0">
+      <div class="ws-qlabel">Q1 · Multiple Choice</div>
+      <div class="ws-qtext">What was the significance of the Montgomery Bus Boycott (1955-56)?</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr1',this,false)"><span class="wol">A</span>It forced Congress to pass the Civil Rights Act 1964</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr1',this,true)"><span class="wol">B</span>It showed the power of non-violent economic pressure — Black Americans boycotted buses for 381 days until the Supreme Court ruled bus segregation unconstitutional, and made Martin Luther King nationally famous</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr1',this,false)"><span class="wol">C</span>It ended all segregation in Alabama immediately</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr1',this,false)"><span class="wol">D</span>It was organised by Malcolm X and the Nation of Islam</div>
+      </div>
+      <div class="ws-reveal" id="wq-cr1-r"><strong>B.</strong> The Montgomery Bus Boycott (Dec 1955 – Dec 1956): after Rosa Parks was arrested, Black Americans (75% of bus riders) refused to use city buses for 381 days. The economic pressure worked — the Supreme Court ruled bus segregation unconstitutional. It demonstrated the effectiveness of non-violent direct action and economic pressure, and launched MLK to national prominence.</div>
+    </div>
+
+    <div class="ws-q" id="wq-cr2" data-done="0">
+      <div class="ws-qlabel">Q2 · Short Answer (4 marks)</div>
+      <div class="ws-qtext">Describe the methods used by Martin Luther King and the Civil Rights Movement to campaign for equal rights. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-cr2-ta" placeholder="Give 4 specific, developed factual points about campaign methods..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-cr2')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-cr2-r"><strong>Model answer — 1 mark per developed point:</strong><br>
+      • <strong>Non-violent direct action</strong> — protesters deliberately broke unjust laws (e.g. sitting at segregated lunch counters) and accepted arrest without retaliation, exposing the injustice of segregation. (1)<br>
+      • <strong>Boycotts</strong> — the Montgomery Bus Boycott used economic pressure to force desegregation, showing that Black economic power could be effective. (1)<br>
+      • <strong>Mass marches</strong> — the March on Washington (1963, 250,000 people) and Selma to Montgomery marches (1965) generated enormous media attention and political pressure. (1)<br>
+      • <strong>Freedom Rides</strong> (1961) — interracial groups deliberately rode segregated buses into the South; the violent responses attracted national media and embarrassed the Kennedy administration. (1)<br>
+      • <strong>Legal challenges</strong> (NAACP) — test cases like Brown v Board of Education used the courts to overturn segregation laws. (1)</div>
+    </div>
+
+    <div class="ws-q" id="wq-cr3" data-done="0">
+      <div class="ws-qlabel">Q3 · Multiple Choice</div>
+      <div class="ws-qtext">What did Malcolm X and the Nation of Islam advocate that was DIFFERENT from Martin Luther King\'s approach?</div>
+      <div class="ws-opts2">
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr3',this,false)"><span class="wol">A</span>Greater use of peaceful marches and sit-ins</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr3',this,true)"><span class="wol">B</span>Black separatism — Black Americans should build their own separate society rather than integrate with white America, and had the right to defend themselves against white violence</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr3',this,false)"><span class="wol">C</span>Working only through the courts to achieve civil rights</div>
+        <div class="ws-opt2" onclick="wsMCQ('wq-cr3',this,false)"><span class="wol">D</span>Focusing only on winning voting rights in the South</div>
+      </div>
+      <div class="ws-reveal" id="wq-cr3-r"><strong>B — Black separatism and self-defence.</strong> Malcolm X rejected integration and non-violence. He argued Black Americans should build separate Black institutions, businesses, and communities, and had the right to defend themselves against white violence. He drew support particularly from Northern urban Black communities who felt King\'s campaigns didn\'t address their poverty, housing discrimination, and police brutality.</div>
+    </div>
+
+    <div class="ws-q" id="wq-cr4" data-done="0">
+      <div class="ws-qlabel">Q4 · Explain Question (4 marks)</div>
+      <div class="ws-qtext">Explain why the Civil Rights Act (1964) and Voting Rights Act (1965) were passed. (4 marks)</div>
+      <textarea class="ws-ta" id="wq-cr4-ta" placeholder="Give reasons WHY these acts were passed..."></textarea>
+      <button class="ws-check" onclick="wsReveal('wq-cr4')">Show Model Answer</button>
+      <div class="ws-reveal" id="wq-cr4-r"><strong>Model answer — 1 mark per developed reason:</strong><br>
+      • <strong>Sustained civil rights campaigning built irresistible pressure</strong> — years of marches, sit-ins, Freedom Rides, and the March on Washington showed the breadth of public support for change. (1)<br>
+      • <strong>Television coverage of state violence</strong> — scenes of peaceful protesters being attacked by police dogs and fire hoses at Birmingham (1963) shocked the nation and international community, embarrassing the USA during the Cold War. (1)<br>
+      • <strong>President Kennedy\'s assassination</strong> (November 1963) gave President Johnson a mandate to push through civil rights legislation in his memory. (1)<br>
+      • <strong>The Selma to Montgomery marches</strong> (1965) — footage of "Bloody Sunday" on the Edmund Pettus Bridge directly accelerated the Voting Rights Act. (1)<br>
+      • <strong>Political calculation</strong> — Johnson needed the support of Black voters and wanted to leave a legacy of social reform (the "Great Society"). (1)</div>
+    </div>
+
+    <div class="ws-action-row">
+      <button class="btn btn-green" onclick="wsMarkAll(2)" style="flex:1">Mark All</button>
+      <button class="btn btn-ghost" onclick="wsReset2(2)" style="flex:1">Reset</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ MOCK EXAM PAGE
+
+<!-- ═══════════════ MOCK EXAM PAGE ═══════════════ -->
+<div class="page" id="page-mock">
+  <div id="mock-home">
+    <div class="exam-hero">
+      <h2>📋 Mock Exam — Nat 5 Biology</h2>
+      <p>Based on the SQA curriculum. Two sittings just like the real exam.<br><strong>Paper 1:</strong> Short answers · 25 marks · 30 min &nbsp;|&nbsp; <strong>Paper 2:</strong> Extended · 25 marks · 40 min</p>
+    </div>
+    <div class="exam-cards">
+      <div class="exam-card" onclick="startMock('paper1')">
+        <div class="ec-icon">📄</div>
+        <div><div class="ec-title">Paper 1 — Mixed Questions</div><div class="ec-desc">25 questions · 30 minutes · all units</div></div>
+      </div>
+      <div class="exam-card" onclick="startMock('paper2')">
+        <div class="ec-icon">📝</div>
+        <div><div class="ec-title">Paper 2 — Mixed Questions</div><div class="ec-desc">25 questions · 40 minutes · all units</div></div>
+      </div>
+    </div>
+    <div class="section-title" style="margin-top:8px">📋 Exam Tips</div>
+    <div class="tip-card"><div class="tip-icon">✏️</div><div class="tip-text"><strong>Know your question types.</strong> "Describe" = what happened (facts). "Explain" = why it happened (reasons). "How far do you agree" = balanced essay with evidence on BOTH sides. Each requires a different approach.</div></div>
+    <div class="tip-card"><div class="tip-icon">🔬</div><div class="tip-text"><strong>Learn the equations</strong> — key facts, dates, and causes for each topic are commonly tested in describe and explain questions.</div></div>
+    <div class="tip-card"><div class="tip-icon">📊</div><div class="tip-text"><strong>Show your reasoning</strong> — for 2-mark questions, give two separate points. Watch for command words: "describe", "explain", "state".</div></div>
+    <div class="tip-card"><div class="tip-icon">🧬</div><div class="tip-text"><strong>Genetics questions</strong> — always show your Punnett square working. State the genotype AND phenotype ratio in your answer.</div></div>
+    <div class="tip-card"><div class="tip-icon">⏱</div><div class="tip-text"><strong>Manage your time</strong> — if stuck, move on and come back. Never leave a blank — an attempt may get a mark.</div></div>
+  </div>
+  <div id="mock-exam" style="display:none">
+    <div class="exam-timer-bar">
+      <span style="font-size:1rem">⏱</span>
+      <span class="exam-timer-val" id="mock-timer">30:00</span>
+      <span style="font-size:0.78rem;color:var(--muted)" id="mock-paper-label">Paper 1</span>
+      <span class="exam-marks">Score: <span id="mock-score-live">0</span> / <span id="mock-total-live">25</span></span>
+    </div>
+    <div class="q-progress"><div class="q-progress-fill" id="mock-progress-fill" style="width:0%"></div></div>
+    <div id="mock-q-area"></div>
+    <div class="btn-row">
+      <button class="btn btn-green" id="mock-submit-btn" onclick="mockSubmit()">Submit Answer ✓</button>
+      <button class="btn btn-ghost" onclick="mockSkip()">Skip →</button>
+      <button class="btn btn-red" onclick="mockEnd()">End Exam</button>
+    </div>
+  </div>
+  <div id="mock-results" style="display:none">
+    <div class="results-hero">
+      <div class="score-ring">
+        <svg width="130" height="130" viewBox="0 0 130 130">
+          <circle cx="65" cy="65" r="54" fill="none" stroke="#30363d" stroke-width="10"/>
+          <circle id="mock-ring" cx="65" cy="65" r="54" fill="none" stroke="#3fb950" stroke-width="10" stroke-linecap="round" stroke-dasharray="339" stroke-dashoffset="339"/>
+        </svg>
+        <div class="score-ring-text">
+          <div class="score-big" id="mock-pct">0%</div>
+          <div class="score-lbl">SCORE</div>
+        </div>
+      </div>
+      <div class="grade-pill" id="mock-grade"></div>
+      <div style="font-size:1rem;font-weight:800" id="mock-msg"></div>
+      <div style="font-size:0.8rem;color:var(--muted);margin-top:4px" id="mock-sub"></div>
+      <div class="res-grid">
+        <div class="res-item"><div class="res-val" id="mr-correct" style="color:var(--accent)">0</div><div class="res-key">CORRECT</div></div>
+        <div class="res-item"><div class="res-val" id="mr-wrong" style="color:var(--accent2)">0</div><div class="res-key">WRONG</div></div>
+        <div class="res-item"><div class="res-val" id="mr-time">—</div><div class="res-key">TIME</div></div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <button class="btn btn-green" onclick="restartMock()">Try Again</button>
+      <button class="btn btn-ghost" onclick="document.getElementById('mock-home').style.display='block';document.getElementById('mock-results').style.display='none'">← Exams</button>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════ TOPICS PAGE ═══════════════ -->
+<div class="page" id="page-topics">
+  <div class="section-title">🗂 Topics</div>
+  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:14px">Tap a topic to practise it directly</p>
+  <div class="topic-grid" id="topic-grid-page"></div>
+</div>
+
+<!-- ═══════════════ KEY FACTS PAGE ═══════════════ -->
+<div class="page" id="page-formulas">
+  <div class="section-title">📚 Key Facts & Timelines</div>
+  <p style="font-size:0.8rem;color:var(--muted);margin-bottom:16px">Essential knowledge for the SQA exam — learn these!</p>
+
+  <div class="formula-section">
+    <h3>⚔️ Era of the Great War, 1900–1928</h3>
+    <div class="formula-cards">
+      <div class="formula-card"><div class="formula-name">Key Timeline</div><div class="formula-val">1914: War begins, voluntary recruitment, Pals Battalions<br>1914: DORA (Defence of the Realm Act) — government controls<br>1915: Rent Strikes in Glasgow (Mary Barbour)<br>1915: Gallipoli campaign<br>1916: Battle of the Somme · Conscription introduced (Jan)<br>1916: Tanks first used (Battle of the Somme)<br>1917: USA enters war · Rationing introduced<br>1918: Representation of the People Act (women over 30 get vote)<br>1918: Armistice (11 November)<br>1921: Post-war economic depression begins<br>1928: Equal Franchise Act (women over 21 get vote)</div></div>
+      <div class="formula-card"><div class="formula-name">Scots on the Western Front</div><div class="formula-val">Voluntary recruitment → Pals Battalions → Conscription (1916)<br>Trench conditions: mud, rats, lice, trench foot, shell shock<br>Tactics: artillery barrages, going "over the top", stalemate<br>Technology: tanks (1916), poison gas (chlorine/mustard), aircraft, machine guns<br>Conscientious objectors: tribunals, non-combat roles, white feathers</div></div>
+      <div class="formula-card"><div class="formula-name">Domestic Impact: Society & Culture</div><div class="formula-val">DORA: censorship, pub hours reduced, food controls<br>Propaganda: posters, press control, demonisation of Germany<br>Rationing: sugar/meat rationed 1918 (German U-boats threat)<br>Women: took men's jobs in munitions, transport, offices, farms<br>Casualties: huge death toll — impact on communities (Pals Battalions)<br>Conscientious objectors: white feathers, tribunals, imprisonment</div></div>
+      <div class="formula-card"><div class="formula-name">Domestic Impact: Industry & Politics</div><div class="formula-val">War boosted: shipbuilding, steel, coal, munitions<br>Women's war work → argument for suffrage<br>Rent Strike 1915: women fought landlord rent increases → Rent Restriction Act<br>Campaigns for women\'s suffrage: suffragettes suspended militancy during war<br>1918 Representation of People Act: all men over 21 + women over 30 get vote<br>Post-war: heavy industry declined — lost overseas markets, unemployment<br>1928: full equal suffrage for women (over 21)</div></div>
+    </div>
+  </div>
+
+  <div class="formula-section">
+    <h3>⛓️ The Trade in Enslaved African People, 1770–1807</h3>
+    <div class="formula-cards">
+      <div class="formula-card"><div class="formula-name">The Triangular Trade</div><div class="formula-val">Stage 1: British goods (guns, cloth, alcohol) → West Africa<br>Stage 2: Enslaved Africans → Caribbean/Americas (Middle Passage)<br>Stage 3: Plantation produce (sugar, tobacco, cotton) → Britain<br>Middle Passage: 6-8 weeks, appalling conditions, 10-20% death rate<br>Slave "factories" on African coast: coastal kingdoms sold captives<br>Impact: British ports (Liverpool, Bristol, Glasgow) grew wealthy</div></div>
+      <div class="formula-card"><div class="formula-name">Britain and the Caribbean</div><div class="formula-val">Sugar most important crop — enormously profitable<br>Plantation system: enslaved Africans worked brutal hours<br>Violent punishment, family separation, no legal rights<br>Impact on British economy: banking, insurance, shipbuilding, textiles<br>Liverpool, Bristol, Glasgow: cities enriched by the trade</div></div>
+      <div class="formula-card"><div class="formula-name">Key Figures in the Abolitionist Campaign</div><div class="formula-val">William Wilberforce: leading Parliamentary abolitionist, introduced bills annually<br>Thomas Clarkson: gathered evidence — interviewed sailors, collected instruments of torture<br>Olaudah Equiano: formerly enslaved African, published autobiography 1789<br>Granville Sharp: publicised Zong Massacre 1781<br>Quakers: first organised opponents of slavery (religious grounds)</div></div>
+      <div class="formula-card"><div class="formula-name">Abolitionist Methods & Arguments</div><div class="formula-val">Methods: meetings, petitions, public lectures, evidence gathering (Clarkson),<br>first-hand testimony (Equiano), shocking images (Brookes diagram)<br>Arguments FOR abolition: Christian/moral (all equal before God), humanitarian (cruelty), economic (free labour more efficient)<br>Arguments AGAINST: economic profits, racial pseudoscience, "civilising" claims<br>Enslaved African resistance: revolts, Maroon communities, Haitian Revolution 1791<br>1807: Slave Trade Act passed (abolished British slave trade)</div></div>
+    </div>
+  </div>
+
+  <div class="formula-section">
+    <h3>✊ Free at Last? Civil Rights in the USA, 1918–1968</h3>
+    <div class="formula-cards">
+      <div class="formula-card"><div class="formula-name">Key Timeline</div><div class="formula-val">1915: KKK re-founded<br>1930s-40s: Great Migration of Black Americans to Northern cities<br>1954: Brown v Board of Education — school segregation unconstitutional<br>1955-56: Montgomery Bus Boycott (Rosa Parks, MLK)<br>1957: Little Rock Crisis (Little Rock Nine)<br>1960: Greensboro Sit-ins · SNCC founded<br>1961: Freedom Rides<br>1963: March on Washington — "I Have a Dream"<br>1964: Civil Rights Act<br>1965: Selma marches/"Bloody Sunday" · Voting Rights Act<br>1965-68: Ghetto riots (Watts, Detroit, Newark)<br>1966: "Black Power" — Stokely Carmichael · Black Panthers founded<br>1968: Martin Luther King assassinated (April)</div></div>
+      <div class="formula-card"><div class="formula-name">"Separate but Equal" & Jim Crow</div><div class="formula-val">Jim Crow Laws: enforced racial segregation in Southern states<br>KKK: white supremacist terror — lynching, cross-burning, intimidation<br>Around 3,500 lynchings of Black Americans 1882-1968<br>Black Americans prevented from voting: literacy tests, poll taxes, intimidation<br>Plessy v Ferguson (1896): "separate but equal" doctrine legitimised segregation<br>Brown v Board of Education (1954): overturned Plessy — segregation unconstitutional</div></div>
+      <div class="formula-card"><div class="formula-name">Civil Rights Campaigns</div><div class="formula-val">Non-violent direct action (inspired by Gandhi): Montgomery, Sit-ins, Freedom Rides, Marches<br>Martin Luther King: SCLC, non-violence, integration, "beloved community"<br>SNCC: student activists, Sit-ins, Freedom Rides<br>NAACP: legal challenges (Brown v Board)<br>Key achievements: Civil Rights Act 1964, Voting Rights Act 1965<br>Response of authorities: state violence (police dogs, fire hoses at Birmingham) attracted media and public sympathy</div></div>
+      <div class="formula-card"><div class="formula-name">Black Radicalism</div><div class="formula-val">Malcolm X/Nation of Islam: Black separatism, self-defence, reject integration<br>Stokely Carmichael: "Black Power" slogan (1966), Black pride and self-determination<br>Black Panthers (founded Oakland 1966): community programmes + armed self-defence<br>Ghetto riots: Watts 1965, Detroit/Newark 1967 — frustration with Northern poverty<br>Assessment: campaigns achieved legal equality but structural racism remained<br>MLK assassinated April 1968 — national shock</div></div>
+    </div>
+  </div>
+
+  <div class="formula-section">
+    <h3>📜 History Exam Skills</h3>
+    <div class="formula-cards">
+      <div class="formula-card"><div class="formula-name">Question Types in the SQA Paper</div><div class="formula-val">Describe: give factual information about what happened — 1 mark per developed point<br>Explain: give reasons WHY — each reason developed with cause/effect<br>How far do you agree: balanced essay — both sides + reasoned conclusion<br>Source evaluation: judge usefulness of a source (origin, purpose, content, context)<br>Comparison: compare two sources for agreement or difference</div></div>
+      <div class="formula-card"><div class="formula-name">Source Evaluation (OPCC)</div><div class="formula-val">Origin: who wrote it? When? Their position/role?<br>Purpose: why was it created? Propaganda? Personal diary? Official report?<br>Content: what specific information does it provide?<br>Context: how does it fit with wider historical knowledge?<br>A biased source can still be USEFUL as evidence of attitudes at the time<br>From 2027: must include source-specific comments (not just general points)</div></div>
+      <div class="formula-card"><div class="formula-name">Essay Structure (How Far Do You Agree)</div><div class="formula-val">Introduction: state your position (agree/partially agree/disagree)<br>Para 1-2: evidence SUPPORTING the statement<br>Para 3-4: evidence AGAINST / other factors<br>Conclusion: overall judgement — how far you agree and WHY<br>Use factual evidence in every paragraph<br>Avoid: listing facts without analysis; ignoring one side; vague conclusions</div></div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ═══════════════ PROGRESS PAGE
+
+<!-- ═══════════════ PROGRESS PAGE ═══════════════ -->
+<div class="page" id="page-progress">
+  <div class="section-title">📊 Your Progress</div>
+  <div class="prog-stat-grid">
+    <div class="prog-stat"><div class="prog-stat-val" id="ps-total">0</div><div class="prog-stat-key">ANSWERED</div></div>
+    <div class="prog-stat"><div class="prog-stat-val" id="ps-correct">0</div><div class="prog-stat-key">CORRECT</div></div>
+    <div class="prog-stat"><div class="prog-stat-val" id="ps-streak">0</div><div class="prog-stat-key">BEST STREAK</div></div>
+    <div class="prog-stat"><div class="prog-stat-val" id="ps-xp">0</div><div class="prog-stat-key">TOTAL XP</div></div>
+  </div>
+  <div class="section-label" style="margin-bottom:10px">Topic Accuracy</div>
+  <div id="topic-prog-rows"></div>
+  <button class="btn btn-red" onclick="resetAllProgress()" style="margin-top:16px;width:100%">🔄 Reset All Progress</button>
+</div>
+
+<!-- ═══════════════ LINKS PAGE ═══════════════ -->
+<div class="page" id="page-links">
+  <div class="section-title">🔗 Helpful Links</div>
+  <div class="links-grid">
+    <a class="link-card" href="https://www.sqa.org.uk/sqa/47447.html" target="_blank" rel="noopener">
+      <div class="link-icon">🏛</div>
+      <div><div class="link-title">SQA — Nat 5 History</div><div class="link-desc">Official past papers, marking schemes & course spec</div></div>
+    </a>
+    <a class="link-card" href="https://www.bbc.co.uk/bitesize/subjects/zk26n39" target="_blank" rel="noopener">
+      <div class="link-icon">📺</div>
+      <div><div class="link-title">BBC Bitesize — Nat 5 History</div><div class="link-desc">Revision for all Nat 5 History topics</div></div>
+    </a>
+    <a class="link-card" href="https://scholar.hw.ac.uk" target="_blank" rel="noopener">
+      <div class="link-icon">🎓</div>
+      <div><div class="link-title">SCHOLAR (Heriot-Watt)</div><div class="link-desc">Detailed online course for Scottish Nat 5 Biology</div></div>
+    </a>
+    <a class="link-card" href="https://www.understandingstandards.org.uk/Subjects/History" target="_blank" rel="noopener">
+      <div class="link-icon">📖</div>
+      <div><div class="link-title">Understanding Standards</div><div class="link-desc">SQA exemplar answers and marking guidance for History</div></div>
+    </a>
+    <a class="link-card" href="https://www.sqa.org.uk/sqa/45704.html" target="_blank" rel="noopener">
+      <div class="link-icon">🔬</div>
+      <div><div class="link-title">SQA — Nat 5 History Past Papers</div><div class="link-desc">Past question papers and marking instructions for History</div></div>
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════ SETTINGS PAGE ═══════════════ -->
+<div class="page" id="page-settings">
+  <div class="section-title">⚙️ Settings</div>
+  <div class="settings-card">
+    <h3>Your Profile</h3>
+    <div class="setting-row">
+      <span class="setting-label">Your name</span>
+      <input class="setting-input" id="set-name" placeholder="e.g. Eilidh" style="flex:1">
+    </div>
+    <div class="setting-row">
+      <span class="setting-label">Daily question goal</span>
+      <select class="setting-input" id="set-goal">
+        <option value="5">5 questions</option>
+        <option value="10" selected>10 questions</option>
+        <option value="20">20 questions</option>
+        <option value="30">30 questions</option>
+      </select>
+    </div>
+    <button class="btn btn-green" onclick="saveSettings()" style="margin-top:10px;border:none">💾 Save</button>
+  </div>
+  <div class="settings-card">
+    <h3>ℹ️ About</h3>
+    <p style="font-size:0.82rem;line-height:1.6;color:var(--muted)">
+      Covers three SQA Nat 5 History topics: The Era of the Great War 1900-1928, The Trade in Enslaved African People 1770-1807, and Free at Last? Civil Rights in the USA 1918-1968.<br><br>
+      ✅ Verified against SQA Course Spec <strong>C837 75</strong> (valid from 2024–25, confirmed current 2025–26).<br><br>
+      100 practice questions · Worksheets · Mock exam · Key facts & timelines · XP levelling system.<br><br>
+      Progress saves automatically in your browser.
+    </p>
+  </div>
+</div>
+
+<script>
+// ✅ SQA Nat 5 History Course Spec C837 75 (valid from 2024-25, confirmed current 2025-26)
+// Question paper 80 marks (2h 20m) + Assignment 20 marks
+// Three topics selected by the student's school:
+// Section 1 (Scottish): The Era of the Great War, 1900-1928
+// Section 2 (British): The Trade in Enslaved African People, 1770-1807
+// Section 3 (European & World): Free at Last? Civil Rights in the USA, 1918-1968
+const TOPICS = [
+  { id: 'greatwar',  name: 'Era of the Great War',       icon: '⚔️',  sub: '1900-1928 · Western Front · Trenches · Home front · Women · Politics · Technology' },
+  { id: 'slavery',   name: 'Trade in Enslaved Africans', icon: '⛓️',  sub: '1770-1807 · Triangular trade · Caribbean · Abolitionist campaign · Wilberforce · Equiano' },
+  { id: 'civil',     name: 'Free at Last? Civil Rights', icon: '✊',  sub: '1918-1968 · Jim Crow · KKK · MLK · Montgomery · Sit-ins · Black Power · Malcolm X' },
+  { id: 'skills',    name: 'History Skills',             icon: '📜',  sub: 'Source evaluation · Describe · Explain · How far do you agree · Assignment skills' },
+];
+
+const QUESTIONS = [
+  // ══════════════════════════════════════════════════════
+  // THE ERA OF THE GREAT WAR, 1900-1928 (28 questions)
+  // Scottish context — key issues: Western Front, domestic impact (society, industry, politics)
+  // ══════════════════════════════════════════════════════
+  {topic:'greatwar',type:'mcq',q:'What was the main method of recruitment used at the START of World War One in Britain?',
+    opts:['Conscription — all men were legally required to serve','Voluntary recruitment — men chose to enlist, encouraged by propaganda and social pressure','Paid mercenaries from other countries','Only professional soldiers already in the army'],
+    ans:1,explain:'At the start of WWI, Britain relied on voluntary recruitment. Lord Kitchener\'s famous "Your Country Needs YOU" poster was part of a massive propaganda campaign. The Pals Battalions recruited groups of men from the same towns or workplaces. Conscription was only introduced in January 1916.'},
+  {topic:'greatwar',type:'mcq',q:'What was the "Pals Battalions" system?',
+    opts:['A system where officers ate with their men','Groups of men from the same town, workplace or club who enlisted together and served in the same regiment','A German military tactic','The name for conscientious objectors'],
+    ans:1,explain:'Pals Battalions: men from the same community (same town, factory, or football club) enlisted together and fought together. This boosted recruitment but had a devastating effect on communities — whole groups of friends could be wiped out in a single battle, as happened on the Somme in 1916.'},
+  {topic:'greatwar',type:'mcq',q:'What were the main conditions experienced by soldiers in the trenches on the Western Front?',
+    opts:['Clean, comfortable barracks with regular hot meals','Mud, rats, lice, shell shock, "trench foot", constant danger from shellfire and snipers, poor food, and extreme stress','Mostly safe behind the lines, rarely under fire','Comfortable conditions as the war was mostly mobile'],
+    ans:1,explain:'Trench conditions were appalling: constant mud (especially in Flanders), rats, lice, "trench foot" (caused by standing in waterlogged trenches), shell shock (now called PTSD), poor food, constant threat of shellfire and snipers, and the psychological strain of waiting for orders to go "over the top".'},
+  {topic:'greatwar',type:'mcq',q:'What was "shell shock"?',
+    opts:['Physical damage from nearby explosions','A psychological condition caused by the trauma and stress of warfare — symptoms included trembling, nightmares, and inability to function','A type of German artillery shell','A method of training soldiers'],
+    ans:1,explain:'Shell shock (now understood as PTSD — Post-Traumatic Stress Disorder) was a psychological condition caused by the extreme stress, fear, and trauma of trench warfare. Symptoms included trembling, nightmares, paralysis, and mental breakdown. It was often misunderstood and sufferers sometimes court-martialled for cowardice.'},
+  {topic:'greatwar',type:'mcq',q:'What was the significance of the TANK as a new technology in WWI?',
+    opts:['Tanks were used from the very first day of the war','Tanks were introduced in 1916 to cross "No Man\'s Land" and break through barbed wire and trenches — but early models were unreliable','Tanks replaced infantry entirely on the Western Front','Tanks were invented by Germany and used against Britain'],
+    ans:1,explain:'Tanks were introduced by Britain at the Battle of the Somme in 1916. They were designed to cross barbed wire, trenches, and shell craters — overcoming the defensive advantages that had created stalemate. Early tanks were slow and mechanically unreliable, but by 1918 improved models played a significant role in breaking the German lines.'},
+  {topic:'greatwar',type:'mcq',q:'What was POISON GAS used for in WWI, and what were its effects?',
+    opts:['It was used to clear minefields','Poison gas (e.g. chlorine and mustard gas) was used to kill or incapacitate enemy troops in trenches — causing blindness, burning lungs, and slow painful death','Gas was used for signalling between trenches','It was used to destroy enemy tanks'],
+    ans:1,explain:'Poison gas: Germany first used chlorine gas at Ypres in 1915. Later, mustard gas caused blistering, blindness, and destroyed the respiratory system. Gas attacks created terror but were unreliable (dependent on wind direction) and led to the development of gas masks. Both sides used gas extensively.'},
+  {topic:'greatwar',type:'mcq',q:'What was the DEFENCE OF THE REALM ACT (DORA) and what powers did it give the government?',
+    opts:['An act allowing workers to strike during wartime','A law giving the government extensive powers to control civilian life — including controlling the press, censoring information, restricting pub hours, and regulating food supplies','An act setting up the NHS during the war','A law conscripting women into the armed forces'],
+    ans:1,explain:'DORA (1914): gave the government sweeping powers to control civilian life during wartime. Powers included: censoring newspapers and letters, controlling working hours (including pub opening times — reduced to prevent drunkenness affecting war production), requisitioning land and buildings, and controlling food production.'},
+  {topic:'greatwar',type:'mcq',q:'How did WWI change the role of WOMEN in Scottish/British society?',
+    opts:['Women\'s roles did not change at all during the war','Women took on jobs previously done only by men — in munitions factories, transport, and offices — and this contributed to arguments for women\'s suffrage after the war','Women were conscripted and served in the trenches','Women\'s rights were reduced during the war'],
+    ans:1,explain:'WWI transformed women\'s roles: with men away fighting, women filled essential jobs in munitions factories, on trams and buses, in offices, and on farms. This demonstrated women\'s capability and contributed to the 1918 Representation of the People Act, which gave women over 30 the vote. Full female suffrage came in 1928.'},
+  {topic:'greatwar',type:'mcq',q:'What were CONSCIENTIOUS OBJECTORS, and how were they treated?',
+    opts:['Men who volunteered eagerly for the army','Men who refused to fight on moral or religious grounds — they were often branded "cowards", faced tribunals, and some were imprisoned or given non-combat roles','Men who were medically unfit for service','Men who worked in reserved occupations'],
+    ans:1,explain:'Conscientious objectors (COs or "conchies") refused military service after conscription began in 1916, usually on religious (e.g. Quakers) or moral grounds. They faced tribunals to prove their sincerity. Some were given non-combat roles (stretcher-bearers, farm work). Others were imprisoned, faced public hostility, and received white feathers as symbols of cowardice.'},
+  {topic:'greatwar',type:'mcq',q:'What was RATIONING introduced during WWI for?',
+    opts:['To ensure soldiers had enough food at the front','To ensure fair distribution of scarce food and goods on the home front as German submarines disrupted supply ships','To punish civilians for supporting the war','To raise money for the war effort'],
+    ans:1,explain:'Rationing was introduced because German U-boats (submarines) attacked merchant ships bringing food to Britain. By 1917, Britain had only 6 weeks of food supplies left. Voluntary rationing was introduced, followed by compulsory rationing of sugar (1918) and meat (1918). It ensured fair distribution and prevented hoarding.'},
+  {topic:'greatwar',type:'mcq',q:'What impact did WWI have on Scottish HEAVY INDUSTRY after the war?',
+    opts:['Scottish heavy industry boomed and expanded after 1918','The war temporarily boosted heavy industry but the post-war period saw serious decline — shipyards, coal mines and steelworks faced falling orders, unemployment, and economic depression','Scottish industry completely collapsed during the war','Scottish industry was unaffected by the war'],
+    ans:1,explain:'WWI temporarily boosted Scottish heavy industry (shipbuilding, steel, coal) as the war needed ships, weapons, and materials. However, post-1918, overseas markets had been lost, newer industries competed, and the global economy contracted. The 1920s saw mass unemployment in industrial Scotland — the beginning of the "Hungry Thirties".'},
+  {topic:'greatwar',type:'mcq',q:'What was the RENT STRIKE of 1915 in Glasgow?',
+    opts:['Workers striking for higher wages in munitions factories','Tenants (mainly women) in Glasgow refusing to pay rent increases imposed by landlords while their husbands were away fighting — the government was forced to freeze rents','A strike by coal miners in 1915','A protest against food rationing'],
+    ans:1,explain:'The Glasgow Rent Strike (1915): with men away at war, landlords raised rents, knowing tenants were vulnerable. Working-class women, led by figures like Mary Barbour, organised mass refusals to pay. The strike spread across Glasgow. The government, needing industrial peace for the war effort, was forced to pass the Rent Restriction Act 1915, freezing rents.'},
+  {topic:'greatwar',type:'mcq',q:'What was the significance of the 1918 REPRESENTATION OF THE PEOPLE ACT?',
+    opts:['It gave all adults the vote immediately','It extended the vote to all men over 21 AND to women over 30 who met property qualifications — a major step towards democracy, driven partly by women\'s war work','It reduced the voting age to 18','It gave women the right to become MPs only'],
+    ans:1,explain:'The 1918 Representation of the People Act: gave the vote to all men over 21 (including working-class men previously excluded) AND to women over 30 who met a property qualification. It tripled the electorate. Women\'s war work was a key argument for this change. Full equal suffrage for women (over 21) came in 1928.'},
+  {topic:'greatwar',type:'mcq',q:'What was PROPAGANDA used for on the Home Front?',
+    opts:['To communicate with troops in the trenches','To control public opinion — encouraging recruitment, maintaining morale, portraying the enemy negatively, and discouraging anti-war sentiment','To distribute food rations fairly','To communicate government policies to local councils'],
+    ans:1,explain:'Government propaganda served multiple purposes: recruitment (Kitchener posters), maintaining civilian morale, portraying Germany as barbaric and the war as just and necessary, discouraging criticism of the war, and encouraging women to pressure men to enlist (e.g. the white feather campaign). DORA gave powers to censor opposing views.'},
+  {topic:'greatwar',type:'fillin',q:'The system introduced in January 1916 requiring men of military age to serve in the armed forces was called _____.', ans:'conscription', explain:'Conscription (the Military Service Act 1916) made military service compulsory for single men aged 18-41, later extended to married men. It replaced the voluntary system that had recruited over 2 million men. Conscientious objectors could appeal to tribunals.'},
+  {topic:'greatwar',type:'fillin',q:'The 1914 legislation that gave the government sweeping powers to control civilian life and censor the press during wartime was called the Defence of the _____ Act.',ans:'Realm',explain:'The Defence of the Realm Act (DORA, 1914) gave the government extensive wartime powers: censoring newspapers, controlling food production, restricting pub opening hours, and requisitioning land. It significantly expanded state power over everyday life.'},
+
+  // ══════════════════════════════════════════════════════
+  // THE TRADE IN ENSLAVED AFRICAN PEOPLE, 1770-1807 (26 questions)
+  // British context — triangular trade, Caribbean, captives' experience, abolitionist campaign
+  // ══════════════════════════════════════════════════════
+  {topic:'slavery',type:'mcq',q:'What was the "TRIANGULAR TRADE"?',
+    opts:['A trade agreement between three European countries','The three-stage trade route: British goods to Africa → enslaved Africans to the Caribbean/Americas → Caribbean produce (sugar, tobacco) back to Britain','A type of ship used in the slave trade','A method of navigation across the Atlantic'],
+    ans:1,explain:'The Triangular Trade: (1) Ships left Britain with manufactured goods (guns, cloth, alcohol) traded for enslaved Africans on the West African coast. (2) Enslaved Africans were transported to the Caribbean/Americas on the "Middle Passage". (3) Ships returned to Britain laden with plantation produce (sugar, tobacco, cotton). Each stage was profitable.'},
+  {topic:'slavery',type:'mcq',q:'What was the "MIDDLE PASSAGE"?',
+    opts:['The middle part of the journey from Africa back to Britain','The horrific sea voyage transporting enslaved Africans from West Africa to the Caribbean and Americas — conditions were brutally overcrowded and deadly','A route through the middle of Africa','The second leg of the voyage from Britain to Africa'],
+    ans:1,explain:'The Middle Passage: the second leg of the triangular trade — from West Africa to the Caribbean. Enslaved Africans were packed into ships in horrific conditions, chained in the hold with minimal space, food, and air. Death rates were high (10-20%) from disease, dehydration, and despair. The voyage lasted 6-8 weeks.'},
+  {topic:'slavery',type:'mcq',q:'What was the economic importance of SUGAR to Britain?',
+    opts:['Sugar was mainly used as a medicine in the 18th century','Sugar from Caribbean plantations was Britain\'s most profitable import — it fuelled banking, insurance, shipbuilding, and textile industries, making enormous profits for merchants and investors','Sugar had little economic importance at this time','Sugar was mainly grown in Britain'],
+    ans:1,explain:'Sugar was enormously important: Caribbean sugar plantations generated massive profits for British merchants, investors, and plantation owners. The trade financed banks (Barclays, Lloyds), insurance companies (Lloyd\'s of London), and stimulated shipbuilding and textile manufacturing. Cities like Liverpool, Bristol, and Glasgow grew wealthy from the trade.'},
+  {topic:'slavery',type:'mcq',q:'What were the living and working conditions of ENSLAVED AFRICANS on Caribbean plantations?',
+    opts:['Enslaved Africans lived comfortably and were well-fed','Enslaved people worked brutal hours cutting sugar cane, faced violent punishment (whipping), lived in cramped huts, had minimal food and clothing, faced family separation, and had no legal rights','Enslaved Africans were paid wages for their work','Enslaved Africans had legal protections against mistreatment'],
+    ans:1,explain:'Plantation conditions: enslaved Africans worked exhausting hours (especially during sugar harvest), faced brutal physical punishment for any resistance or perceived disobedience, lived in cramped quarters with minimal food, could be separated from family members by sale, had no legal rights, and were legally classified as property (chattel slavery).'},
+  {topic:'slavery',type:'mcq',q:'What was OLAUDAH EQUIANO\'s significance in the abolitionist campaign?',
+    opts:['He was a British MP who voted to abolish the slave trade','He was a formerly enslaved African who published his autobiography in 1789, providing powerful first-hand testimony of the horrors of the slave trade and became a leading voice in the abolitionist movement','He was a plantation owner who supported abolition for economic reasons','He was a ship captain who refused to transport enslaved people'],
+    ans:1,explain:'Olaudah Equiano (or Gustavus Vassa): published "The Interesting Narrative" (1789), a first-hand account of being kidnapped, enslaved, surviving the Middle Passage, and eventually buying his freedom. His book was a bestseller, gave a human face to the suffering of enslaved Africans, and was powerful evidence for abolitionists. He toured Britain giving lectures.'},
+  {topic:'slavery',type:'mcq',q:'What role did WILLIAM WILBERFORCE play in the abolitionist campaign?',
+    opts:['He was an enslaved African who led a rebellion in the Caribbean','He was the leading Parliamentary voice for abolition from 1787 — he introduced abolition bills every year and the campaign succeeded with the Slave Trade Act of 1807','He was a slave ship captain who described the trade\'s profits','He was a scientist who argued the trade was economically harmful'],
+    ans:1,explain:'William Wilberforce: the leading Parliamentary abolitionist. He worked with Thomas Clarkson and the Abolition Society from 1787, introducing bills to end the slave trade every year. After years of defeat, the Slave Trade Act was finally passed in 1807, abolishing the British slave trade (though not slavery itself — that came in 1833).'},
+  {topic:'slavery',type:'mcq',q:'What was the role of THOMAS CLARKSON in the abolitionist campaign?',
+    opts:['He was the Prime Minister who signed the abolition bill','He gathered evidence of the horrors of the slave trade by interviewing sailors, collecting instruments of torture, and publicising conditions aboard slave ships — providing abolitionists with powerful factual evidence','He was a plantation owner who argued against abolition','He was a Caribbean governor who passed local laws against slavery'],
+    ans:1,explain:'Thomas Clarkson: the chief investigator and organiser of the abolitionist campaign. He travelled extensively gathering evidence — interviewing sailors, collecting instruments of torture (thumbscrews, leg irons), and documenting conditions on slave ships. His evidence, including the famous diagram of the Brookes slave ship, shocked public opinion and was crucial to the campaign.'},
+  {topic:'slavery',type:'mcq',q:'What ARGUMENTS did abolitionists use against the slave trade?',
+    opts:['They only used economic arguments about declining profits','A combination of Christian/moral arguments (all humans equal before God), humanitarian arguments (the trade was cruel and inhumane), and eventually economic arguments (free labour was more efficient)','They only used scientific arguments about race','They only argued that slavery was bad for the enslaved Africans, not for Britain'],
+    ans:1,explain:'Abolitionist arguments: (1) Christian/moral: all humans are equal before God, slavery is sinful (Quakers, Evangelicals like Wilberforce). (2) Humanitarian: the trade was cruel and degrading to human beings. (3) Economic (later): free workers were more productive than enslaved workers. (4) They also used first-hand testimony from Equiano and former enslaved Africans.'},
+  {topic:'slavery',type:'mcq',q:'What ARGUMENTS did defenders of the slave trade use?',
+    opts:['They argued the trade was morally justified','Economic arguments (trade generated huge profits for Britain, abolition would ruin the economy), racial arguments (claiming Africans were inferior), and arguments that enslaved Africans were better off under British "civilisation"','They argued the trade was too small to matter economically','They only used religious arguments'],
+    ans:1,explain:'Pro-slavery arguments: (1) Economic: the trade generated enormous profits for merchants, bankers, and plantation owners — abolition would damage the British economy. (2) Racial pseudoscience: false claims about African inferiority. (3) "Civilising" arguments: claiming slavery brought Africans into "civilised" society. (4) MPs representing trading cities like Liverpool and Bristol strongly opposed abolition.'},
+  {topic:'slavery',type:'mcq',q:'How did ENSLAVED AFRICANS resist the slave trade?',
+    opts:['They did not resist — resistance was impossible','Resistance included rebellions (e.g. Tacky\'s Revolt in Jamaica, 1760), slave revolts on ships during the Middle Passage, running away (Maroon communities), work slowdowns, and cultural resistance','Only peaceful protest was used','Only legal challenges were attempted'],
+    ans:1,explain:'Enslaved Africans resisted in many ways: revolts on slave ships during the Middle Passage, plantation rebellions (Tacky\'s Revolt, Jamaica 1760; Haitian Revolution 1791), running away and forming Maroon communities (escaped enslaved people in the mountains), day-to-day resistance (working slowly, breaking tools), and preserving African cultural identity.'},
+  {topic:'slavery',type:'mcq',q:'What was the impact of the HAITIAN REVOLUTION (1791) on the debate about slavery?',
+    opts:['It had no impact on Britain','It showed that enslaved Africans would fight for freedom and that slavery could be overturned — it alarmed plantation owners but inspired abolitionists. It also raised fears about the dangers of continued slavery','It convinced Britain to expand the slave trade','It led Britain to immediately abolish slavery in 1791'],
+    ans:1,explain:'The Haitian Revolution (1791-1804): enslaved Africans in Saint-Domingue (Haiti) rose up and eventually created the first Black republic in the Americas. This had a dual effect: it terrified British plantation owners and some MPs (fearing similar revolts), but it also demonstrated the determination of enslaved Africans to gain freedom and strengthened abolitionist arguments.'},
+  {topic:'slavery',type:'mcq',q:'What was the "ZONG MASSACRE" and why was it significant?',
+    opts:['A battle between British and French warships','In 1781, the captain of the Zong slave ship ordered 132 sick enslaved Africans to be thrown overboard to claim insurance money — when the case came to court it was treated as an insurance dispute, outraging abolitionists and the public','A slave revolt on a Caribbean plantation','A Parliamentary debate about the slave trade'],
+    ans:1,explain:'The Zong Massacre (1781): Captain Collingwood ordered 132 sick enslaved Africans thrown overboard so the ship\'s owners could claim insurance (cargo was insured; deaths from illness were not). When taken to court, it was treated as an insurance dispute, not murder. Granville Sharp publicised the case, and it caused public outrage, boosting the abolitionist campaign.'},
+  {topic:'slavery',type:'mcq',q:'Why was the Slave Trade Act finally passed in 1807?',
+    opts:['Because all British people had always opposed slavery','A combination of sustained abolitionist campaigning, growing public opinion, political circumstances (including the French Revolutionary Wars making the trade less profitable), and Parliamentary pressure','Because enslaved Africans had all been freed already','Because the trade was no longer profitable enough'],
+    ans:1,explain:'Success of abolition in 1807 resulted from: 20 years of abolitionist campaigning (petitions, evidence, lobbying); growing public support; economic arguments that free labour was more efficient; the French Revolutionary Wars disrupting trade; political changes in Parliament; and the persistence of Wilberforce, Clarkson, and their allies. The act abolished the British slave trade but not slavery itself.'},
+  {topic:'slavery',type:'fillin',q:'The first-hand account of slavery written by a formerly enslaved African, published in 1789, was written by _____ Equiano.',ans:'Olaudah',explain:'Olaudah Equiano\'s autobiography "The Interesting Narrative of the Life of Olaudah Equiano, or Gustavus Vassa, the African" (1789) was one of the most important documents in the abolitionist campaign. It gave a human face to the horrors of the slave trade and was widely read across Britain.'},
+  {topic:'slavery',type:'fillin',q:'The Parliamentary act of 1807 that made it illegal for British ships to transport enslaved Africans is called the _____ Trade Act.',ans:'Slave',explain:'The Slave Trade Act (1807) abolished the British transatlantic slave trade. British ships were no longer allowed to transport enslaved Africans. However, it did not free those already enslaved — that came with the Slavery Abolition Act 1833, which formally abolished slavery across most of the British Empire.'},
+
+  // ══════════════════════════════════════════════════════
+  // FREE AT LAST? CIVIL RIGHTS IN THE USA, 1918-1968 (28 questions)
+  // European & World context — Jim Crow, KKK, campaigns, MLK, Black Power
+  // ══════════════════════════════════════════════════════
+  {topic:'civil',type:'mcq',q:'What were the "JIM CROW LAWS"?',
+    opts:['Laws protecting the civil rights of Black Americans','Laws in Southern US states enforcing racial segregation — keeping Black and white Americans separate in schools, transport, restaurants, and other public spaces','Federal laws protecting voting rights','Laws about immigration to the United States'],
+    ans:1,explain:'Jim Crow Laws: state and local laws in the Southern USA (from the 1870s, widespread by 1900) that enforced racial segregation. Black Americans were separated from white Americans in schools, buses, restaurants, theatres, hospitals, and public toilets. Signs reading "White Only" and "Colored" enforced this. Black Americans faced inferior facilities and services.'},
+  {topic:'civil',type:'mcq',q:'What was the KU KLUX KLAN (KKK) and what were its methods?',
+    opts:['A civil rights organisation supporting Black Americans','A white supremacist terrorist organisation that used violence, intimidation, lynching, and terror to maintain white supremacy and prevent Black Americans from voting or claiming rights','A political party in the Southern United States','A religious organisation promoting racial equality'],
+    ans:1,explain:'The KKK: a white supremacist terrorist organisation, re-founded in 1915. Methods included: lynching (racially motivated murders — around 3,500 Black Americans were lynched 1882-1968), burning crosses, bombing Black homes and churches, violent attacks on civil rights workers, and preventing Black Americans from voting through intimidation.'},
+  {topic:'civil',type:'mcq',q:'What was the significance of the BROWN v BOARD OF EDUCATION case (1954)?',
+    opts:['It gave Black Americans the right to vote','The Supreme Court ruled that racial segregation in public schools was UNCONSTITUTIONAL — overturning the "separate but equal" doctrine established by Plessy v Ferguson (1896)','It outlawed the KKK','It desegregated public transport'],
+    ans:1,explain:'Brown v Board of Education (1954): the US Supreme Court unanimously ruled that racial segregation in public schools was unconstitutional, overturning the 1896 Plessy v Ferguson "separate but equal" ruling. This was a landmark legal victory for the civil rights movement — the principle of segregation was now illegal, though implementation faced massive resistance.'},
+  {topic:'civil',type:'mcq',q:'What was the MONTGOMERY BUS BOYCOTT (1955-56)?',
+    opts:['A strike by white bus drivers in Alabama','After Rosa Parks was arrested for refusing to give up her bus seat to a white passenger, Black Americans boycotted the Montgomery bus system for 381 days — forcing desegregation of city buses and making Martin Luther King a national figure','A protest march in Washington DC','A court case about school segregation'],
+    ans:1,explain:'Montgomery Bus Boycott (1955-56): Rosa Parks refused to give up her seat on a segregated bus and was arrested. Black Americans (who made up 75% of bus riders) boycotted the bus system for 381 days. Led by Martin Luther King and the MIA, it ended when the Supreme Court ruled bus segregation unconstitutional. It showed the power of non-violent direct action and economic pressure.'},
+  {topic:'civil',type:'mcq',q:'What was the LITTLE ROCK CRISIS (1957)?',
+    opts:['A riot in Little Rock about housing conditions','Governor Orval Faubus used the National Guard to prevent nine Black students ("the Little Rock Nine") from attending a previously all-white high school — President Eisenhower sent federal troops to enforce desegregation','A strike by Black workers in Arkansas','A protest march led by Martin Luther King'],
+    ans:1,explain:'Little Rock Crisis (1957): Arkansas Governor Faubus deployed the National Guard to prevent the "Little Rock Nine" from entering Central High School. President Eisenhower sent 1,000 federal paratroopers and federalised the Arkansas National Guard to enforce the Supreme Court\'s desegregation order. It showed the federal government would enforce civil rights but also the fierce resistance to desegregation in the South.'},
+  {topic:'civil',type:'mcq',q:'What were the SIT-INS at Woolworth\'s lunch counter (1960)?',
+    opts:['A protest against low wages in department stores','Black students sat at segregated "white-only" lunch counters and refused to leave when refused service — using non-violent direct action to highlight and challenge segregation in public facilities','A labour union dispute','A protest against the KKK'],
+    ans:1,explain:'Greensboro Sit-ins (1960): four Black college students sat at a Woolworth\'s "whites only" lunch counter and refused to leave when denied service. The tactic spread across the South. Sit-ins were powerful because: they were non-violent, attracted media attention, and disrupted business. They led to the formation of SNCC (Student Non-violent Coordinating Committee).'},
+  {topic:'civil',type:'mcq',q:'What were the FREEDOM RIDES (1961)?',
+    opts:['A series of bus tours promoting civil rights legislation','Interracial groups of activists who rode interstate buses into the segregated South to test the Supreme Court\'s ruling that interstate bus terminals must be desegregated — they faced violent attack by white mobs','A march from Selma to Montgomery','Civil rights activists who rode horses to avoid bus segregation'],
+    ans:1,explain:'Freedom Rides (1961): interracial groups rode interstate buses into the Deep South to test compliance with Supreme Court rulings desegregating interstate travel. Freedom Riders were violently attacked by white mobs (buses were firebombed in Anniston, riders beaten in Birmingham). The violence attracted national media attention and embarrassed the Kennedy administration internationally.'},
+  {topic:'civil',type:'mcq',q:'What was the significance of the MARCH ON WASHINGTON (1963)?',
+    opts:['A march protesting against US involvement in Vietnam','Over 250,000 people marched on Washington DC, where Martin Luther King delivered his "I Have a Dream" speech — it was the largest civil rights demonstration in history and helped push for the Civil Rights Act of 1964','A march protesting against school segregation','A protest against housing discrimination in Washington DC'],
+    ans:1,explain:'March on Washington (August 1963): 250,000 people — Black and white — marched to the Lincoln Memorial. King\'s "I Have a Dream" speech became iconic. The march put enormous pressure on Congress and President Kennedy to pass civil rights legislation. It was a pivotal moment in the campaign that helped lead to the Civil Rights Act of 1964.'},
+  {topic:'civil',type:'mcq',q:'What were the CIVIL RIGHTS ACT (1964) and VOTING RIGHTS ACT (1965)?',
+    opts:['Acts that ended all discrimination in the USA immediately','The Civil Rights Act outlawed racial discrimination in public places and employment; the Voting Rights Act outlawed discriminatory practices that prevented Black Americans from voting — the most important civil rights legislation of the 20th century','Acts that only applied to Southern states','Acts that only protected voting rights, not other civil rights'],
+    ans:1,explain:'Civil Rights Act (1964): outlawed racial discrimination in hotels, restaurants, theatres, and other public places; banned job discrimination. Voting Rights Act (1965): outlawed literacy tests and other barriers used to prevent Black Americans from registering to vote. These two acts, along with the 24th Amendment (1964 — ending poll taxes), formed the legislative foundation of civil rights.'},
+  {topic:'civil',type:'mcq',q:'What were the MARCHES IN SELMA (1965) and their significance?',
+    opts:['Marches protesting against Vietnam War conscription','A series of marches from Selma to Montgomery to demand voting rights — police attacked peaceful marchers on the Edmund Pettus Bridge on "Bloody Sunday" (March 7, 1965), the footage of which shocked the nation and accelerated the passage of the Voting Rights Act','Marches protesting against segregated schools in Alabama','Marches organised by the KKK against civil rights'],
+    ans:1,explain:'Selma to Montgomery marches (1965): protesters marching for voting rights were beaten by state troopers on the Edmund Pettus Bridge on "Bloody Sunday" (7 March 1965). Television footage of the attack shocked the nation and international community. President Johnson responded by pushing through the Voting Rights Act (1965). The marches showed the power of non-violent protest in generating political pressure.'},
+  {topic:'civil',type:'mcq',q:'What was the philosophy of MARTIN LUTHER KING regarding civil rights protest?',
+    opts:['Violence was sometimes necessary to achieve civil rights','Non-violent direct action inspired by Gandhi — protests should be peaceful, dignified, and legal, forcing opponents to reveal their brutality and generating public sympathy','Civil rights should only be pursued through the courts, not protests','Black Americans should separate from white society completely'],
+    ans:1,explain:'Martin Luther King advocated non-violent direct action, inspired by Gandhi\'s methods in India. Key principles: refuse to obey unjust laws (civil disobedience), remain non-violent even when attacked (showing moral superiority), create tension that forces negotiation. King believed this would attract white allies, maintain the moral high ground, and generate media coverage that would build public and political pressure.'},
+  {topic:'civil',type:'mcq',q:'What did MALCOLM X and the NATION OF ISLAM advocate?',
+    opts:['Integration with white society through peaceful protest','Black separatism — Black Americans should live separately from white society, develop their own economy and institutions, and defend themselves against white violence. Malcolm X challenged King\'s integrationist, non-violent approach','Voting rights for Black Americans as the priority','Only economic equality, not social or political equality'],
+    ans:1,explain:'Malcolm X and the Nation of Islam: rejected integration, advocated Black separatism and self-reliance. Malcolm X argued that non-violence was ineffective and that Black Americans had the right to defend themselves. He drew support from Northern urban Black communities who felt MLK\'s Southern campaigns didn\'t address their problems (poverty, housing discrimination, police brutality). He was assassinated in 1965.'},
+  {topic:'civil',type:'mcq',q:'What was "BLACK POWER" and who was associated with it?',
+    opts:['The name of the Civil Rights Act of 1964','A political movement emphasising Black pride, self-determination, economic self-sufficiency, and political power for Black Americans — associated with Stokely Carmichael, the Black Panthers, and influenced by Malcolm X','A non-violent protest movement led by Martin Luther King','A Republican Party policy on civil rights'],
+    ans:1,explain:'Black Power: emerged in the mid-1960s, emphasising Black pride, cultural identity, self-determination, and sometimes armed self-defence. Key figures: Stokely Carmichael (coined the term "Black Power" in 1966), the Black Panthers (founded 1966, Oakland — provided community programmes but also advocated armed self-defence). More radical than King\'s approach, it alarmed white Americans but reflected frustration with the slow pace of change.'},
+  {topic:'civil',type:'mcq',q:'What problems did Black Americans face in NORTHERN CITIES (the ghetto problem)?',
+    opts:['Black Americans in the North had full equality and faced no discrimination','Despite legal segregation being less formal, Black Americans in Northern cities faced poverty, substandard housing, unemployment, police brutality, and racial discrimination in jobs and housing — contributing to ghetto riots in the 1960s','Black Americans in the North were wealthier than those in the South','Only voting rights were restricted in Northern cities'],
+    ans:1,explain:'Northern ghettos: legal segregation was less explicit in the North, but Black Americans faced: residential segregation (confined to overcrowded, poor-quality areas), unemployment and poverty, inadequate schools, police brutality, and discrimination in employment and housing. Frustration exploded in riots: Watts (LA, 1965), Detroit (1967), Newark (1967). These showed civil rights legislation had not solved the deeper problem of structural racism.'},
+  {topic:'civil',type:'fillin',q:'The 1955-56 campaign in which Black Americans refused to use city buses in Alabama to protest segregation is called the Montgomery Bus _____.',ans:'Boycott',explain:'The Montgomery Bus Boycott lasted 381 days and ended when the Supreme Court ruled bus segregation unconstitutional. It demonstrated the economic power of Black consumers and the effectiveness of non-violent direct action. It launched Martin Luther King to national prominence and led to the formation of the Southern Christian Leadership Conference (SCLC).'},
+  {topic:'civil',type:'fillin',q:'The 1964 legislation that outlawed racial discrimination in public places and employment across the United States is called the Civil _____ Act.',ans:'Rights',explain:'The Civil Rights Act 1964 was a landmark piece of legislation: it outlawed discrimination in hotels, restaurants, cinemas, and other public places; banned discriminatory hiring practices; and established the Equal Employment Opportunity Commission (EEOC). President Johnson pushed it through Congress following Kennedy\'s assassination.'},
+
+  // ══════════════════════════════════════════════════════
+  // HISTORY SKILLS (18 questions)
+  // Source evaluation, question types, assignment skills
+  // ══════════════════════════════════════════════════════
+  {topic:'skills',type:'mcq',q:'In the SQA History exam, a "DESCRIBE" question asks you to:',
+    opts:['Give your opinion about a historical event','Give a factual account of what happened — providing detailed, accurate factual information about a historical event, development, or person','Evaluate whether a source is reliable','Explain the reasons WHY something happened'],
+    ans:1,explain:'"Describe" questions: give factual information about what happened. Each point must be a specific, accurate historical fact (not just a general statement). Each valid, developed point earns 1 mark. E.g. "Describe the conditions in the trenches" — give specific details about mud, rats, lice, shell shock, etc.'},
+  {topic:'skills',type:'mcq',q:'In the SQA History exam, an "EXPLAIN" question asks you to:',
+    opts:['Describe what happened in chronological order','Give reasons WHY something happened or had the impact it did — each reason should be explained and developed, not just stated as a fact','Give your personal opinion about history','Evaluate the usefulness of a historical source'],
+    ans:1,explain:'"Explain" questions: give reasons, not just facts. Each point must explain WHY or HOW — cause and effect. The SQA spec says: "responses should provide reasons and not just facts." E.g. "Explain why the slave trade was abolished in 1807" — give specific reasons (abolitionist campaigns, public opinion, political factors) each developed into a clear explanation.'},
+  {topic:'skills',type:'mcq',q:'What is an "HOW FAR DO YOU AGREE" question asking you to do?',
+    opts:['Simply agree or disagree in one sentence','Write a balanced essay weighing evidence on BOTH sides of a historical argument — agreeing to an extent with the statement while also considering evidence that limits or contradicts it, reaching a reasoned conclusion','List all the facts you know about the topic','Only give evidence that agrees with the statement'],
+    ans:1,explain:'"How far do you agree" questions: require a balanced essay that considers evidence FOR and AGAINST the given statement. Structure: introduction (your position), paragraphs supporting the statement, paragraph(s) countering it (other factors), conclusion (overall judgement — how far you agree and why). A one-sided answer cannot reach the highest mark bands.'},
+  {topic:'skills',type:'mcq',q:'What makes a historical source USEFUL for the historian?',
+    opts:['A source is only useful if it was written at the time of the events','The usefulness of a source depends on its origin (who created it), purpose (why it was created), content (what it says), and context (how it fits with wider knowledge). A biased source can still be useful as evidence of attitudes at the time','Only primary sources are useful for historians','A source is only useful if it agrees with other sources'],
+    ans:1,explain:'Source evaluation considers: ORIGIN (author, type of source, date), PURPOSE (why was it created? propaganda? personal diary?), CONTENT (what does it actually say?), and CONTEXT (how does it fit with what we know?). A source can be biased but still useful — e.g. Nazi propaganda is useful for studying Nazi attitudes even though it is not neutral.'},
+  {topic:'skills',type:'mcq',q:'A "SOURCE EVALUATION" question in the History exam asks you to evaluate how USEFUL a source is. Which of the following would be a good evaluative point?',
+    opts:['"This source is useful because it tells us about the topic."','"This source was written by a government minister in 1916 — as someone involved in decision-making it would have insider knowledge, making it useful for understanding government attitudes to conscription, although it may be biased towards presenting government policy positively."','"This source is useful because it was written a long time ago."','"This source is useful because it is a primary source."'],
+    ans:1,explain:'Good source evaluation: comment specifically on the ORIGIN (who wrote it, their position, when), PURPOSE (why was it written), and CONTENT (what specific information does it provide). Then explain WHY these factors make it more or less useful. Vague points like "it is useful because it tells us about the topic" will not gain marks.'},
+  {topic:'skills',type:'mcq',q:'What is a FACTOR in a history essay?',
+    opts:['A single date or fact','A category of cause or reason — e.g. "military factors", "political factors", "economic factors" — used to organise your analysis of why something happened','A type of historical source','A paragraph in an essay'],
+    ans:1,explain:'Factors in history essays: broad categories of causes used to organise analysis. E.g. to explain why WWI broke out: military factors (arms race), political factors (alliance system), economic factors (imperial rivalry), immediate factors (assassination of Franz Ferdinand). Using different factors shows breadth of analysis and helps structure a balanced essay.'},
+  {topic:'skills',type:'mcq',q:'What should a CONCLUSION in a "how far do you agree" history essay include?',
+    opts:['Just repeat everything you said in the essay','A clear overall judgement on how far you agree with the statement, supported by brief reference to the most important evidence from your essay — not just a summary but a reasoned verdict','Only mention the evidence that agrees with the statement','Simply say "I agree" or "I disagree"'],
+    ans:1,explain:'A strong conclusion: states clearly how far you agree with the statement; explains which factor/evidence is most important and why; makes a reasoned judgement based on evidence from the essay. It should not just list everything again — it should be a verdict. A vague conclusion ("there were many factors for and against") will lose marks.'},
+  {topic:'skills',type:'mcq',q:'What is the difference between a PRIMARY and SECONDARY source?',
+    opts:['Primary sources are more reliable than secondary sources','A primary source was created at the time of the events by someone with direct experience (e.g. diary, letter, speech, photograph). A secondary source was created later, often using primary sources (e.g. textbooks, historians\' interpretations)','Secondary sources are always more useful','Primary sources are only written documents'],
+    ans:1,explain:'Primary sources: created at the time of the events or by someone with direct experience — diaries, letters, speeches, newspaper articles, photographs, official documents. Secondary sources: created later, using primary sources — historians\' books, textbooks, documentaries. Both can be useful — primary sources give direct evidence; secondary sources may offer more balanced analysis.'},
+  {topic:'skills',type:'mcq',q:'What is the SQA National 5 History ASSIGNMENT?',
+    opts:['A 1-hour multiple-choice test','A piece of independent research where candidates choose a historical question, research it using a range of sources, and write a 700-900 word extended response under exam conditions using a resource sheet','A group project completed in class','A practical test where candidates create a historical exhibition'],
+    ans:1,explain:'The Assignment (20 marks): candidates choose a historical question, research it using a range of sources (at least two different types), and write an extended response (700-900 words) under exam conditions over 1 hour. They may use a resource sheet (200-word limit) with notes and references. It is worth 20% of the total mark (80 marks from question paper + 20 from assignment = 100 total).'},
+  {topic:'skills',type:'fillin',q:'In a History exam, a question that asks you to give reasons WHY something happened (rather than just what happened) is called an _____ question.',ans:'explain',explain:'"Explain" questions require causes, reasons, or factors — not just a description of events. Each point should be developed: state the reason, then explain HOW it contributed to the outcome. E.g. "Explain why Black Americans supported the Montgomery Bus Boycott" — don\'t just describe the boycott, explain the reasons people joined it.'},
+  {topic:'skills',type:'fillin',q:'When evaluating a source\'s usefulness, historians consider its origin, purpose, content, and _____.',ans:'context',explain:'Context: how the source fits with wider historical knowledge. If a source\'s claims match (or contradict) what we know from other evidence, this affects its usefulness. Context also means understanding the historical circumstances in which the source was produced — e.g. a letter written under censorship during wartime must be understood in that context.'},
+];
+
+// ═══════════════════════════════════════
+// STATE
+// ═══════════════════════════════════════
+let xp = 0, level = 1, streak = 0, bestStreak = 0;
+let totalAnswered = 0, totalCorrect = 0;
+let topicStats = { greatwar:{a:0,c:0}, slavery:{a:0,c:0}, civil:{a:0,c:0}, skills:{a:0,c:0} };
+let dailyGoal = 10, dailyDone = 0;
+let quizPool = [], quizIdx = 0;
+let currentQ = null;
+let fcCards = [], fcIdx = 0, fcKnew = 0;
+let mockQuestions = [], mockIdx = 0, mockScore = 0;
+let mockTimer = null, mockTimeLeft = 0, mockStartTime = null;
+let wsScores = [{c:0,t:0},{c:0,t:0},{c:0,t:0}], wsSheet = 0;
+const WS_IDS = [
+  ['wq-gw1','wq-gw2','wq-gw3','wq-gw4','wq-gw5'],
+  ['wq-sl1','wq-sl2','wq-sl3'],
+  ['wq-cr1','wq-cr2','wq-cr3','wq-cr4']
+];
+
+// ── PERSIST ──
+function saveState() {
+  try {
+    localStorage.setItem('nat5bio_v2', JSON.stringify({
+      xp, level, streak, bestStreak, totalAnswered, totalCorrect,
+      topicStats, dailyGoal, dailyDone: getDailyDone()
+    }));
+  } catch(e){}
+}
+function loadState() {
+  try {
+    const s = JSON.parse(localStorage.getItem('nat5bio_v2')||'{}');
+    xp = s.xp||0; level = s.level||1; streak = s.streak||0;
+    bestStreak = s.bestStreak||0; totalAnswered = s.totalAnswered||0;
+    totalCorrect = s.totalCorrect||0; topicStats = s.topicStats||topicStats;
+    dailyGoal = s.dailyGoal||10;
+    const today = new Date().toDateString();
+    const savedDay = s.dailyDay||'';
+    dailyDone = savedDay === today ? (s.dailyDone||0) : 0;
+  } catch(e){}
+}
+function getDailyDone(){ return dailyDone; }
+loadState();
+
+// ── NAV ──
+function nav(page) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-'+page).classList.add('active');
+  document.querySelector(`[data-page="${page}"]`)?.classList.add('active');
+  if (page==='progress') renderProgress();
+  if (page==='topics') renderTopicPage();
+}
+
+// ── TOPBAR ──
+function updateTopbar() {
+  document.getElementById('xp-val').textContent = xp;
+  document.getElementById('streak-val').textContent = streak;
+  document.getElementById('lv-badge').textContent = 'Lv '+level;
+}
+function showXPToast(pts) {
+  const t = document.getElementById('xp-toast');
+  t.textContent = '+'+pts+' XP ⭐';
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 1800);
+}
+function addXP(pts) {
+  xp += pts;
+  const needed = level * 100;
+  if (xp >= needed) { level++; xp -= needed; showXPToast(pts); }
+  else showXPToast(pts);
+  updateTopbar();
+}
+
+// ── DAILY GOAL ──
+function updateGoal(inc=1) {
+  dailyDone += inc;
+  const pct = Math.min(100, (dailyDone/dailyGoal)*100);
+  document.getElementById('goal-fill').style.width = pct+'%';
+  document.getElementById('goal-txt').textContent = dailyDone+'/'+dailyGoal;
+  if (dailyDone >= dailyGoal) {
+    document.getElementById('goal-txt').textContent = '✅ Done!';
+  }
+}
+
+// ── PRACTICE ──
+function getPool() {
+  const t = document.getElementById('topic-sel').value;
+  const ty = document.getElementById('type-sel').value;
+  let pool = QUESTIONS.filter(q =>
+    (t==='all' || q.topic===t) &&
+    (ty==='all' || q.type===ty)
+  );
+  return shuffle(pool);
+}
+
+function newQuestion() {
+  if (!quizPool.length || quizIdx >= quizPool.length) {
+    quizPool = getPool();
+    quizIdx = 0;
+  }
+  currentQ = quizPool[quizIdx++];
+  renderQ(currentQ);
+  const pct = Math.min(100,(quizIdx/Math.max(quizPool.length,1))*100);
+  document.getElementById('q-progress-fill').style.width = pct+'%';
+}
+
+function renderQ(q) {
+  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
+  const diffTag = quizIdx <= 3 ? 'easy' : quizIdx <= 7 ? '' : 'hard';
+  const diffLabel = diffTag==='easy'?'Easy':diffTag==='hard'?'Hard':'Medium';
+  const letters = ['A','B','C','D'];
+  let inner = '';
+  if (q.type==='mcq') {
+    const shuffledOpts = q.opts.map((o,i)=>({o,correct:i===q.ans}));
+    inner = `<div class="opts">${shuffledOpts.map((op,i)=>`
+      <button class="opt-btn" data-correct="${op.correct}" onclick="checkMCQ(this,${op.correct})">
+        <span class="opt-letter">${letters[i]}</span>${op.o}
+      </button>`).join('')}</div>`;
+  } else {
+    inner = `<input class="fill-input" id="fill-ans" placeholder="Type your answer…" onkeydown="if(event.key==='Enter')checkFill()">
+      <div class="btn-row"><button class="btn btn-green" onclick="checkFill()">Check ✓</button><button class="btn btn-ghost" onclick="newQuestion()">Skip →</button></div>`;
+  }
+  document.getElementById('question-area').innerHTML = `
+    <div class="q-card">
+      <div class="q-card-header">
+        <span class="q-tag">${topicName.toUpperCase()}</span>
+        ${diffTag?`<span class="q-tag ${diffTag}">${diffLabel}</span>`:''}
+        <span class="q-num">Q${quizIdx} / ${quizPool.length}</span>
+      </div>
+      <div class="q-text">${q.q}</div>
+      ${inner}
+      <div class="explanation" id="expl">
+        <div class="expl-label">📚 Explanation</div>
+        ${q.explain||''}
+      </div>
+    </div>
+    <div class="btn-row" id="next-row" style="display:none">
+      <button class="btn btn-green" onclick="newQuestion()">Next Question →</button>
+    </div>`;
+}
+
+function checkMCQ(el, correct) {
+  document.querySelectorAll('.opt-btn').forEach(b=>b.disabled=true);
+  el.classList.add(correct?'correct':'wrong');
+  if (!correct) {
+    // Only highlight the single correct button, not all non-wrong ones
+    document.querySelectorAll('.opt-btn').forEach(b=>{
+      if(b.dataset.correct==='true') b.classList.add('correct');
+    });
+  }
+  recordAnswer(correct, currentQ?.topic);
+  document.getElementById('expl')?.classList.add('show');
+  const nr = document.getElementById('next-row');
+  if(nr) nr.style.display='flex';
+}
+
+function checkFill() {
+  const inp = document.getElementById('fill-ans');
+  if (!inp||!currentQ) return;
+  const val = inp.value.trim().toLowerCase();
+  const ans = currentQ.ans.toLowerCase();
+  const correct = val===ans || ans.includes(val) || val.includes(ans);
+  inp.classList.add(correct?'correct':'wrong');
+  inp.disabled = true;
+  document.querySelector('.btn-green')?.setAttribute('disabled','true');
+  if (!correct) {
+    const note = document.createElement('div');
+    note.style.cssText='color:var(--accent2);font-size:0.8rem;margin:6px 0';
+    note.textContent='✓ Correct answer: '+currentQ.ans;
+    inp.after(note);
+  }
+  recordAnswer(correct, currentQ?.topic);
+  document.getElementById('expl')?.classList.add('show');
+  const nr = document.getElementById('next-row');
+  if(nr) nr.style.display='flex';
+}
+
+function recordAnswer(correct, topic) {
+  totalAnswered++;
+  if(correct){ totalCorrect++; streak++; if(streak>bestStreak)bestStreak=streak; addXP(correct?10:2); }
+  else { streak=0; addXP(2); }
+  if(topic && topicStats[topic]){ topicStats[topic].a++; if(correct)topicStats[topic].c++; }
+  updateGoal();
+  updateTopbar();
+  saveState();
+}
+
+// ── FLASHCARDS ──
+function startFlashcards() {
+  const t = document.getElementById('fc-topic-sel').value;
+  fcCards = shuffle(QUESTIONS.filter(q=>t==='all'||q.topic===t));
+  fcIdx = 0; fcKnew = 0;
+  renderFC();
+}
+function renderFC() {
+  if (!fcCards.length) return;
+  const q = fcCards[fcIdx % fcCards.length];
+  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
+  const ans = q.type==='mcq' ? q.opts[q.ans] : q.ans;
+  document.getElementById('fc-front-text').textContent = q.q;
+  document.getElementById('fc-back-text').innerHTML = `<strong style="color:var(--accent4)">${ans}</strong>${q.explain?`<br><br><span style="font-size:0.8rem;color:var(--muted)">${q.explain}</span>`:''}`;
+  document.getElementById('fc-inner').classList.remove('flipped');
+  const total = fcCards.length;
+  const pct = Math.round((fcIdx/total)*100);
+  document.getElementById('fc-prog-txt').textContent = (fcIdx+1)+' / '+total;
+  document.getElementById('fc-prog-fill').style.width = pct+'%';
+  document.getElementById('fc-knew-txt').textContent = fcKnew;
+}
+function flipCard(){ document.getElementById('fc-inner').classList.toggle('flipped'); }
+function fcNext(knew) {
+  if(!fcCards.length) return;
+  if(knew){ fcKnew++; recordAnswer(true, fcCards[fcIdx%fcCards.length].topic); }
+  fcIdx++;
+  if(fcIdx >= fcCards.length){ fcIdx=0; fcCards=shuffle(fcCards); }
+  renderFC();
+}
+
+// ── MOCK EXAM ──
+let mockPaperType = 'paper1';
+function startMock(paper) {
+  mockPaperType = paper;
+  mockQuestions = shuffle(QUESTIONS).slice(0,25);
+  mockIdx = 0; mockScore = 0;
+  const mins = paper==='paper1'?30:40;
+  mockTimeLeft = mins*60;
+  mockStartTime = Date.now();
+  document.getElementById('mock-home').style.display='none';
+  document.getElementById('mock-exam').style.display='block';
+  document.getElementById('mock-results').style.display='none';
+  document.getElementById('mock-paper-label').textContent = paper==='paper1'?'Paper 1':'Paper 2';
+  document.getElementById('mock-total-live').textContent = 25;
+  mockTimer = setInterval(()=>{
+    mockTimeLeft--;
+    const m=Math.floor(mockTimeLeft/60), s=mockTimeLeft%60;
+    document.getElementById('mock-timer').textContent = String(m).padStart(2,'0')+':'+String(s).padStart(2,'0');
+    if(mockTimeLeft<=0){ clearInterval(mockTimer); mockShowResults(); }
+  },1000);
+  renderMockQ();
+}
+function renderMockQ() {
+  if(mockIdx>=mockQuestions.length){ mockEnd(); return; }
+  const q = mockQuestions[mockIdx];
+  const topicName = TOPICS.find(t=>t.id===q.topic)?.name||'';
+  const letters=['A','B','C','D'];
+  document.getElementById('mock-progress-fill').style.width=((mockIdx/25)*100)+'%';
+  document.getElementById('mock-score-live').textContent = mockScore;
+  let inner='';
+  if(q.type==='mcq'){
+    inner=`<div class="opts">${q.opts.map((o,i)=>`
+      <button class="opt-btn" data-correct="${i===q.ans}" onclick="mockCheckMCQ(this,${i===q.ans})">
+        <span class="opt-letter">${letters[i]}</span>${o}
+      </button>`).join('')}</div>`;
+  } else {
+    inner=`<input class="fill-input" id="mock-fill" placeholder="Type your answer…" onkeydown="if(event.key==='Enter')mockSubmit()">`;
+  }
+  document.getElementById('mock-q-area').innerHTML=`
+    <div class="q-card">
+      <div class="q-card-header">
+        <span class="q-tag">${topicName.toUpperCase()}</span>
+        <span class="q-num">Q${mockIdx+1}/25</span>
+      </div>
+      <div class="q-text">${q.q}</div>
+      ${inner}
+      <div class="explanation" id="mock-expl"><div class="expl-label">📚 Explanation</div>${q.explain||''}</div>
+    </div>`;
+}
+function mockCheckMCQ(el, correct) {
+  document.querySelectorAll('#mock-q-area .opt-btn').forEach(b=>b.disabled=true);
+  el.classList.add(correct?'correct':'wrong');
+  if (!correct) {
+    document.querySelectorAll('#mock-q-area .opt-btn').forEach(b=>{
+      if(b.dataset.correct==='true') b.classList.add('correct');
+    });
+  }
+  if(correct) mockScore++;
+  document.getElementById('mock-expl')?.classList.add('show');
+  document.getElementById('mock-score-live').textContent=mockScore;
+  setTimeout(()=>{ mockIdx++; renderMockQ(); }, 1400);
+}
+function mockSubmit() {
+  const inp=document.getElementById('mock-fill');
+  const q=mockQuestions[mockIdx];
+  if(!inp||!q) return;
+  const val=inp.value.trim().toLowerCase();
+  const ans=q.ans.toLowerCase();
+  const correct=val===ans||ans.includes(val)||val.includes(ans);
+  inp.classList.add(correct?'correct':'wrong');
+  inp.disabled=true;
+  if(correct) mockScore++;
+  document.getElementById('mock-expl')?.classList.add('show');
+  document.getElementById('mock-score-live').textContent=mockScore;
+  setTimeout(()=>{ mockIdx++; renderMockQ(); },1200);
+}
+function mockSkip(){ mockIdx++; renderMockQ(); }
+function mockEnd(){ clearInterval(mockTimer); mockShowResults(); }
+function mockShowResults() {
+  document.getElementById('mock-exam').style.display='none';
+  document.getElementById('mock-results').style.display='block';
+  const pct=Math.round((mockScore/25)*100);
+  const elapsed=Math.round((Date.now()-mockStartTime)/1000);
+  const mins=Math.floor(elapsed/60),secs=elapsed%60;
+  document.getElementById('mock-pct').textContent=pct+'%';
+  document.getElementById('mr-correct').textContent=mockScore;
+  document.getElementById('mr-wrong').textContent=25-mockScore;
+  document.getElementById('mr-time').textContent=mins+'m '+secs+'s';
+  let grade,colour,msg;
+  if(pct>=85){grade='A';colour='var(--accent)';msg='Outstanding! 🎉';}
+  else if(pct>=70){grade='B';colour='var(--accent4)';msg='Well done! 👏';}
+  else if(pct>=60){grade='C';colour='var(--accent3)';msg='Good effort! 😊';}
+  else if(pct>=45){grade='D';colour='#ff9f43';msg='Keep revising! 📚';}
+  else{grade='No Award';colour='var(--accent2)';msg="Don't give up! 💪";}
+  const g=document.getElementById('mock-grade');
+  g.textContent='Grade '+grade; g.style.background=colour+'22';
+  g.style.color=colour; g.style.border=`1px solid ${colour}44`;
+  document.getElementById('mock-msg').textContent=msg;
+  const circ=2*Math.PI*54, offset=circ-(pct/100)*circ;
+  const ring=document.getElementById('mock-ring');
+  ring.style.strokeDasharray=circ; ring.style.stroke=colour;
+  ring.style.strokeDashoffset=circ;
+  setTimeout(()=>{ ring.style.transition='stroke-dashoffset 1s ease'; ring.style.strokeDashoffset=offset; },100);
+}
+function restartMock(){ startMock(mockPaperType); }
+
+// ── WORKSHEET ENGINE ──
+function wsSwitchSheet(idx) {
+  wsSheet=idx;
+  document.querySelectorAll('.ws-tab').forEach((t,i)=>t.classList.toggle('wta',i===idx));
+  document.querySelectorAll('.ws-sheet2').forEach((s,i)=>{ s.classList.remove('wsa'); if(i===idx) s.classList.add('wsa'); });
+  updateWsStrip();
+}
+function wsMCQ(qid, el, correct) {
+  const q=document.getElementById(qid);
+  if(q.dataset.done==='1') return;
+  q.dataset.done='1';
+  q.querySelectorAll('.ws-opt2').forEach(o=>{o.disabled=true;o.onclick=null;});
+  el.classList.add(correct?'wc':'ww');
+  document.getElementById(qid+'-r')?.classList.add('show');
+  q.classList.add(correct?'ok':'bad');
+  wsRecord(correct);
+}
+function wsEq(qid, ids, answers) {
+  const q=document.getElementById(qid);
+  if(q.dataset.done==='1') return;
+  let allOk=true;
+  ids.forEach((id,i)=>{
+    const inp=document.getElementById(id);
+    if(!inp) return;
+    const v=inp.value.trim().toLowerCase().replace(/[^a-z0-9\- ]/g,'');
+    const a=answers[i].toLowerCase().replace(/[^a-z0-9\- ]/g,'');
+    const ok=v===a||v.includes(a)||a.includes(v)||(v.length>2&&(a.startsWith(v)||v.startsWith(a)));
+    inp.classList.add(ok?'ec':'ew'); inp.disabled=true;
+    if(!ok) allOk=false;
+  });
+  q.dataset.done='1';
+  q.classList.add(allOk?'ok':'bad');
+  document.getElementById(qid+'-r')?.classList.add('show');
+  q.querySelector('.ws-check').disabled=true;
+  wsRecord(allOk);
+}
+function wsPunnett(qid, ids, answers) {
+  const q=document.getElementById(qid);
+  if(q.dataset.done==='1') return;
+  let allOk=true;
+  ids.forEach((id,i)=>{
+    const inp=document.getElementById(id);
+    if(!inp) return;
+    const ok=inp.value.trim().toUpperCase()===answers[i];
+    const cell=inp.closest('.pun-cell');
+    if(cell) cell.classList.add(ok?'pc':'pw');
+    inp.disabled=true;
+    if(!ok){ allOk=false; inp.value=answers[i]; }
+  });
+  q.dataset.done='1';
+  q.classList.add(allOk?'ok':'bad');
+  document.getElementById(qid+'-r')?.classList.add('show');
+  q.querySelector('.ws-check').disabled=true;
+  wsRecord(allOk);
+}
+function wsReveal(qid) {
+  const q=document.getElementById(qid);
+  if(q.dataset.done==='1') return;
+  q.dataset.done='1';
+  const ta=document.getElementById(qid+'-ta');
+  if(ta){ ta.disabled=true; ta.classList.add(ta.value.trim().length>10?'ec':'ew'); }
+  document.getElementById(qid+'-r')?.classList.add('show');
+  q.querySelector('.ws-check').disabled=true;
+  q.classList.add('ok');
+  wsRecord(true);
+}
+function wsRecord(ok) {
+  wsScores[wsSheet].t++;
+  if(ok) wsScores[wsSheet].c++;
+  updateWsStrip();
+}
+function updateWsStrip() {
+  const s=wsScores[wsSheet];
+  const strip=document.getElementById('ws-score-strip');
+  if(s.t===0){ strip.style.display='none'; return; }
+  strip.style.display='flex';
+  const pct=Math.round((s.c/s.t)*100);
+  document.getElementById('ws-score-num').textContent=s.c+'/'+s.t;
+  document.getElementById('ws-score-fill2').style.width=pct+'%';
+  const msg=pct>=80?'🌟 Excellent! On track for an A/B!':pct>=60?'👍 Good — review what you missed':'📚 Keep revising — read the model answers';
+  document.getElementById('ws-score-msg').textContent=msg;
+}
+function wsMarkAll(idx) {
+  const prev=wsSheet; wsSheet=idx;
+  WS_IDS[idx].forEach(qid=>{
+    const q=document.getElementById(qid);
+    if(!q||q.dataset.done==='1') return;
+    document.getElementById(qid+'-r')?.classList.add('show');
+    q.querySelectorAll('.eq-in').forEach(i=>{ if(!i.disabled){i.disabled=true;i.classList.add('ew');} });
+    q.querySelectorAll('.pun-in').forEach(i=>{ if(!i.disabled){i.disabled=true;i.closest('.pun-cell')?.classList.add('pw');} });
+    q.querySelectorAll('.ws-ta').forEach(ta=>{ if(!ta.disabled){ta.disabled=true;ta.classList.add('ew');} });
+    q.dataset.done='1'; q.classList.add('bad');
+    q.querySelectorAll('.ws-check').forEach(b=>b.disabled=true);
+    wsRecord(false);
+  });
+  wsSheet=prev; updateWsStrip();
+}
+function wsReset2(idx) {
+  wsScores[idx]={c:0,t:0};
+  WS_IDS[idx].forEach(qid=>{
+    const q=document.getElementById(qid);
+    if(!q) return;
+    q.dataset.done='0'; q.className='ws-q';
+    document.getElementById(qid+'-r')?.classList.remove('show');
+    q.querySelectorAll('.ws-opt2').forEach(o=>{ o.classList.remove('wc','ww'); o.disabled=false; });
+    q.querySelectorAll('.eq-in').forEach(i=>{ i.value=''; i.disabled=false; i.classList.remove('ec','ew'); });
+    q.querySelectorAll('.pun-in').forEach(i=>{ i.value=''; i.disabled=false; i.closest('.pun-cell')?.classList.remove('pc','pw'); });
+    q.querySelectorAll('.ws-ta').forEach(ta=>{ ta.disabled=false; ta.classList.remove('ec','ew'); });
+    q.querySelectorAll('.ws-check').forEach(b=>b.disabled=false);
+  });
+  if(wsSheet===idx) updateWsStrip();
+}
+
+// ── TOPICS PAGE ──
+function renderTopicPage() {
+  const g=document.getElementById('topic-grid-page');
+  g.innerHTML='';
+  TOPICS.forEach(t=>{
+    const qs=QUESTIONS.filter(q=>q.topic===t.id).length;
+    const st=topicStats[t.id]||{a:0,c:0};
+    const pct=st.a>0?Math.round((st.c/st.a)*100):0;
+    const div=document.createElement('div');
+    div.className='topic-card sel';
+    div.innerHTML=`<div class="topic-icon">${t.icon}</div>
+      <div class="topic-name">${t.name}</div>
+      <div class="topic-count">${qs} questions</div>
+      <div class="topic-sub-text">${t.sub||''}</div>
+      <div class="topic-prog"><div class="topic-prog-fill" style="width:${pct}%"></div></div>`;
+    div.onclick=()=>{
+      document.getElementById('topic-sel').value=t.id;
+      nav('practice');
+      newQuestion();
+    };
+    g.appendChild(div);
+  });
+}
+
+// ── PROGRESS ──
+function renderProgress() {
+  document.getElementById('ps-total').textContent=totalAnswered;
+  document.getElementById('ps-correct').textContent=totalCorrect;
+  document.getElementById('ps-streak').textContent=bestStreak;
+  document.getElementById('ps-xp').textContent=xp;
+  const rows=document.getElementById('topic-prog-rows');
+  rows.innerHTML='';
+  TOPICS.forEach(t=>{
+    const st=topicStats[t.id]||{a:0,c:0};
+    const pct=st.a>0?Math.round((st.c/st.a)*100):0;
+    rows.innerHTML+=`<div class="prog-topic-row">
+      <div class="prog-topic-name">${t.icon} ${t.name}</div>
+      <div class="prog-topic-bar-wrap">
+        <div class="prog-topic-bar"><div class="prog-topic-fill" style="width:${pct}%"></div></div>
+      </div>
+      <div class="prog-topic-pct">${st.a>0?pct+'%':'—'}</div>
+    </div>`;
+  });
+}
+function resetAllProgress() {
+  if(!confirm('Reset all progress? This cannot be undone.')) return;
+  xp=0;level=1;streak=0;bestStreak=0;totalAnswered=0;totalCorrect=0;
+  topicStats={greatwar:{a:0,c:0},slavery:{a:0,c:0},civil:{a:0,c:0},skills:{a:0,c:0}};
+  dailyDone=0;
+  saveState(); updateTopbar(); updateGoal(0); renderProgress();
+}
+
+// ── SETTINGS ──
+function saveSettings() {
+  const name=document.getElementById('set-name').value.trim();
+  dailyGoal=parseInt(document.getElementById('set-goal').value)||10;
+  if(name) {
+    document.querySelector('.topbar-logo').innerHTML=`🏴󠁧󠁢󠁳󠁣󠁴󠁿 ${name}'s <span>Bio</span>`;
+  }
+  saveState();
+  const btn=document.querySelector('#page-settings .btn-green');
+  btn.textContent='✅ Saved!';
+  setTimeout(()=>btn.textContent='💾 Save',1500);
+}
+
+// ── UTILS ──
+function shuffle(arr){ const a=[...arr]; for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+// ── INIT ──
+updateTopbar();
+updateGoal(0);
+newQuestion();
+</script>
+</body>
+</html>
